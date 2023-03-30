@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Set files</title>
+  </head>
+  <body>
+    <script>
+      // 1. Create an empty set called mySet.
+      let set = new Set();
+      console.log(set);
+
+      // 2.  Add the values 1, 2, and 3 to mySet.
+      set.add(1).add(2).add(3);
+      console.log(set);
+
+      // 3. Check if mySet contains the value 2.
+      console.log(set.has(2));
+
+      // 4. Remove the value 3 from mySet
+      set.delete(3);
+      console.log(set);
+
+      // 5. Find the size of mySet.
+      console.log(set.size);
+
+      // 6. Create a new set called otherSet containing the values 2, 3, and 4.
+      set.add(2).add(3).add(4);
+      console.log(set);
+
+      // 7. Find the intersection of mySet and otherSet.
+      let mySet = new Set([1, 2, 3, 4, 5]);
+      let otherSet = new Set([2, 3, 6, 7, 8, 1]);
+      let ans = new Set([...mySet].filter((x) => otherSet.has(x)));
+      console.log(ans);
+
+      // 8. Find the union of mySet and otherSet
+      let mySet3 = new Set([1, 2, 3, 6]);
+      let otherSet3 = new Set([2, 3, 4, 5]);
+      // Duplicate
+      let newArray = [...mySet3, ...otherSet3];
+      console.log(newArray);
+      //Unique
+      let uniqueSet1 = new Set([...set, ...otherSet]);
+      console.log(uniqueSet1);
+
+      // 9. Find the difference of mySet and otherSet.
+      let mySet5 = new Set([1, 2, 3, 6]);
+      let otherSet5 = new Set([2, 3, 4, 5]);
+      //otherSet - set
+      let newArray1 = [];
+      for (let value of otherSet5) {
+        if (!mySet5.has(value)) {
+          newArray1.push(value);
+        }
+      }
+      console.log(newArray1);
+
+      // set - otherSet
+      let newArray2 = [];
+      for (let value of mySet5) {
+        if (!otherSet5.has(value)) {
+          newArray2.push(value);
+        }
+      }
+      console.log(newArray2);
+
+      // 10. Find the symmetric difference of mySet and otherSet.
+      let mySet6 = new Set([1, 2, 3, 6]);
+      let otherSet6 = new Set([2, 3, 4, 5]);
+      let newArray3 = [];
+      for (let value of otherSet6) {
+        if (!mySet6.has(value)) {
+          newArray3.push(value);
+        }
+      }
+      for (let value of mySet6) {
+        if (!otherSet6.has(value)) {
+          newArray3.push(value);
+        }
+      }
+      console.log(newArray3);
+
+      // 11. Create an array called myArray containing the values 1, 2, 2, and 3.
+      let myArray = [1, 2, 2, 3];
+      console.log(myArray);
+
+      // 12. Convert myArray to a set called mySet2.
+      let mySet1 = new Set(myArray);
+      console.log(mySet1);
+
+      // 13. Check if mySet2 contains the value 2.
+      console.log(mySet1.has(2));
+
+      // 14. Remove all duplicate values from myArray and store the result in a new array called uniqueArray.
+      let myArray3 = [1, 2, 3, 2, 4, 3, 5];
+      let mySet4 = new Set(myArray3);
+      let uniqueArray = [...mySet4];
+      console.log(uniqueArray);
+
+      // 15. Convert uniqueArray to a set called uniqueSet.
+      let uniqueArray4 = [1, 2, 3, 4, 5];
+      let uniqueSet = new Set(uniqueArray4);
+      console.log(uniqueSet);
+
+      // 16. Add the value 4 to uniqueSet.
+      uniqueSet.add(10).add(20).add(30).add(40);
+      console.log(uniqueSet);
+
+      // 17. Remove the value 3 from uniqueSet.
+      uniqueSet.delete(3);
+      console.log(uniqueSet);
+
+      // 18. Check if uniqueSet is a subset of mySet.
+
+      // 19. Check if mySet is a superset of uniqueSet.
+
+      // 20. Find the difference between mySet and uniqueSet.
+
+      // 21. Array to Set conversion
+      let arr = [10, 20, 30, 40, 20, 30, 50];
+      let setArr = new Set(arr);
+      console.log(setArr); // output : {10, 20, 30, 40, 50}
+
+      // 22. Set to Array
+      let setToArr = new Set([1, 2, 3, 4, 5]);
+      let array = [...setToArr];
+      console.log(setToArr); // output : {1, 2, 3, 4, 5}
+      console.log(array); // output : [1, 2, 3, 4, 5]
+
+      // Set method
+      let newSet = new Set();
+      newSet.add(10);
+      newSet.add(20);
+      newSet.add(30);
+      console.log(newSet); // output : {10, 20, 30}
+
+      console.log(newSet.size); // output : 3
+
+      console.log(newSet.has(20)); // output : true
+
+      console.log(newSet.has(21)); // output : false
+
+      newSet.delete(30);
+      console.log(newSet); // output : {10, 20}
+
+      newSet.forEach(test);
+      function test(num) {
+        console.log(num); // output : 10 20
+      }
+
+      for (let value of newSet) {
+        console.log(newSet); // output : {10, 20}
+      }
+
+      newSet.clear();
+      console.log(newSet); // output : {size: 0}
+    </script>
+  </body>
+</html>

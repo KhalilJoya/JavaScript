@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Object file</title>
+  </head>
+  <body>
+    <script>
+      /* let obj = {};               //Literal Syntax
+       let obj1 = new Object();    //Object Syntax
+       console.log(obj, obj1); */
+
+      //     // 1. Dot Annoation and Bracket Annoation
+      //     const obj = {
+      //       name: "Khalil Joya",
+      //       age: 18,
+      //       mobileNo: 9079883575,
+      //       address: {
+      //         city: "Jaipur",
+      //         pinCOde: 302012,
+      //       },
+      //     };
+      //     console.log(obj);                       // output : {name: 'Khalil Joya', age: 18, mobileNo: 9079883575, address: {…}}
+      //     console.log(obj.name);                  // output : Khalil Joya
+      //     console.log(obj.address);               // output : {city: 'Jaipur', pinCOde: 302012}
+      //     console.log(obj.address.city);          // output : Jaipur
+      //     console.log(obj["name"]);               // output : Khalil Joya
+      //     console.log(obj["address"]);            // output : {city: 'Jaipur', pinCOde: 302012}
+      //     console.log(obj["address"]["city"]);    // output : Jaipur
+
+      //     // 2.
+      //     const obj1 = {
+      //       name: "Wecode",
+      //       address: "Jhotwara, Jaipur",
+      //       mobile: 9079883575,
+      //     };
+      //     let key = "mobile";
+      //     console.log(obj1.key);                       // output : undefined
+      //     console.log(obj1["mobile"], obj1["name"]);   // output : 9079883575 'Wecode'
+      //     console.log(obj1[key]);                      // output : 9079883575
+
+      //     // 3.
+      //     const obj3 = {
+      //       name: "Wecode",
+      //       address: "Jhotwara, Jaipur",
+      //       mobile: 9079883575,
+      //       ages: [1, 2, 3, 4, 5],
+      //       sum: function (a, b) {
+      //         console.log(a + b);
+      //       },
+      //     };
+      //     console.log(obj3.name);                           // output : Wecode
+      //     console.log(obj3.ages[2]);                        // output : 3
+      //     obj3.sum(10, 20);                                 // output : 30
+
+      //     // 4. Nested Object - Object inside Object
+      //     const obj4 = {
+      //       name: "Wecode",
+      //       address: {
+      //         pincode: 302012,
+      //         area: "Jhotwara",
+      //         city: "Jaipur",
+      //         state: "Rajasthan",
+      //       },
+      //       mobile: 9079883575,
+      //       ages: [1, 2, 3, 4, 5],
+      //       sum: function (a, b) {
+      //         return a + b;
+      //       },
+      //     };
+      //     console.log(obj4.address.city);                       // output : Jaipur
+      //     console.log(obj4.address.pincode);                    // output : 302012
+      //     console.log(obj4["address"]["city"]);                 // output : Jaipur
+      //     console.log(obj4["address"]["pincode"]);              // output : 302012
+      //     console.log(obj4["address"].pincode);                 // output : 302012
+
+      //     // 5.
+      //     const obj5 = {
+      //       name: "Wecode",
+      //       address: {
+      //         //Nested Object - Object inside Object
+      //         pincode: 302012,
+      //         area: "Jhotwara",
+      //         city: "Jaipur",
+      //         state: "Rajasthan",
+      //       },
+      //       mobile: 546565654,
+      //       ages: [1, 2, 3, 4, 5],
+      //       sum: function (a, b) {
+      //         return a + b;
+      //       },
+      //     };
+      //     console.log(Object.keys(obj5));                       // output : ['name', 'address', 'mobile', 'ages', 'sum']
+      //     console.log(Object.values(obj5));                     // output : ['Wecode', {…}, 546565654, Array(5), ƒ]
+      //     console.log(Object.keys(obj5.address));               // output : ['pincode', 'area', 'city', 'state']
+      //     console.log(Object.values(obj5.address));             // output : [302012, 'Jhotwara', 'Jaipur', 'Rajasthan']
+      //     console.log(Object.entries(obj5));                    // output : [Array(2), Array(2), Array(2), Array(2), Array(2)]  =>  ['name', 'Wecode']  ['address', {…}]  ['mobile', 546565654]   ['ages', Array(5)]   ['sum', ƒ]
+
+      //     // 6.
+      //     let obj6 = {
+      //       name: "Khalil",
+      //       mobile: 9079883575,
+      //       address: "Karkwal",
+      //     };
+      //     let arr = Object.keys(obj6);                            // output : name Khalil
+      //     for (let x = 0; x < arr.length; x++) {                  // output : mobile 9079883575
+      //       console.log(arr[x], obj6[arr[x]]);                    // output : address Karkwal
+      //     }
+
+      //     /*  Second Tarika */
+      //     let entries = Object.entries(obj6);
+      //     for (let i = 0; i < entries.length; i++) {                 // output : ['name', 'Khalil']
+      //       console.log(entries[i]);                                 // output : ['mobile', 9079883575]
+      //     }                                                          // output : ['address', 'Karkwal']
+
+      //     /* 3rd Tarika */
+      //     let entries1 = Object.entries(obj6);
+      //     for (let i = 0; i < entries1.length; i++) {                 // output : name Khalil
+      //       console.log(entries1[i][0], entries1[i][1]);              // output : mobile 9079883575
+      //     }                                                           // output : address Karkwal
+
+      //     // 7.
+      //     let obj7 = {
+      //       name: "Khalil",
+      //       mobile: 9079883574,
+      //       address: "Jaipur",
+      //       bankaccount: {
+      //         accountName: "Khalil Joya",
+      //         accountNumber: 40806305409,
+      //       },
+      //     };
+      //     let entries2 = Object.entries(obj7);
+      //     for (let i = 0; i < entries2.length; i++) {
+      //       if (typeof entries2[i][1] === "object") {
+      //         let otherEntires = Object.entries(entries2[i][1]);         // output : accountName Khalil Joya
+      //         for (let j = 0; j < otherEntires.length; j++) {            // output : accountNumber 40806305409
+      //           console.log(otherEntires[j][0], otherEntires[j][1]);
+      //         }
+      //       }
+      //     }
+
+      //     // 8. Entries
+      //     let nestedEntries = {
+      //       name: "Khalil Joya",
+      //       village: "Jhotwara",
+      //       city: "Jaipur",
+      //       district: "Rajsthan",
+      //     };                                                                  // output : name Khalil Joya
+      //     let arr1 = Object.entries(nestedEntries);                           // output : village Jhotwara
+      //     for (let i = 0; i < arr1.length; i++) {                             // output : city Jaipur
+      //       console.log(arr1[i][0], arr1[i][1]);                              // output : district Rajsthan
+      //     }
+
+      //   // 9. Values
+      //   let nestedValues = {
+      //     name: "Khalil Joya",
+      //     village: "Jhotwara",
+      //     city: "Jaipur",
+      //     district: "Rajsthan",
+      //   };                                                                    // output : Khalil Joya
+      //   let arr2 = Object.values(nestedValues);                               // output : Jhotwara
+      //   for (let i = 0; i < arr2.length; i++) {                               // output : Jaipur
+      //     console.log(arr2[i]);                                               // output : Rajsthan
+      //   }
+
+      //     // 10. Keys
+      //     let nestedKeys = {
+      //       name: "Khalil Joya",
+      //       village: "Jhotwara",
+      //       city: "Jaipur",
+      //       district: "Rajsthan",
+      //     };                                                                         // output : name
+      //     let arr3 = Object.keys(nestedKeys);                                        // output : village
+      //     for (let i = 0; i < arr3.length; i++) {                                    // output : city
+      //       console.log(arr3[i]);                                                    // output : district
+      //     }
+
+      let obj = {
+        name: "Wecode",
+        mobile: 54654656,
+        address: {
+          pincode: 302012,
+          city: "Jaipur",
+        },
+      };
+      //Value Update
+      obj.mobile = 9867876876;
+      obj["mobile"] = 4565465656;
+      obj.address.pincode = 322230;
+      console.log(obj);
+
+      delete obj.name;
+    </script>
+  </body>
+</html>

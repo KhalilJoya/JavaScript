@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Map</title>
+  </head>
+  <body>
+    <script>
+      //   let map = new Map();
+      //   console.log(map);
+
+      //   map.set("Name", "Khalil");
+      //   map.set("City", "Jaipur");
+      //   map.set("mobile", 9079883575);
+      //   console.log(map);
+
+      //   console.log(map.get("City"));
+      //   console.log(map.size);
+      //   console.log(map.has("Name"));
+      //   // console.log(map.clear);
+
+      //   // map to array
+      //   console.log([...map]);
+
+      //   // array to map
+      //   let arr = [
+      //     ["name", "sameer"],
+      //     ["city", "merta city"],
+      //   ];
+      //   let map1 = new Map(arr);
+      //   console.log(map1);
+
+      //   // object to map
+      //   let obj = {
+      //     name: "Wecode",
+      //     mobile: 4545345435,
+      //     pincode: 302012,
+      //   };
+      //   let map2 = new Map(Object.entries(obj));
+      //   console.log(map2);
+
+      //   //   // for loop se map
+      //   let map3 = new Map();
+      //   map3.set("js", 800);
+      //   map3.set("designing", 400);
+      //   map3.set("java", 700);
+      //   for (let value of map3) {
+      //     console.log(value);
+      //   }
+      //   let map33 = new Map();
+      //   map33.set("js", 800).set("designing", 400).set("java", 700);
+      //   for (let value of map33) {
+      //     console.log(value[0]);
+      //   }
+
+      //   let map4 = new Map();
+      //   map4.set([1], [2, 3]).set([4], [5, 6]).set([7], [8, 9]);
+      //   for (let val of map4) {
+      //     console.log(val);
+      //   }
+
+      //   let map5 = new Map();
+      //   map5.set([1], [2, 3]).set([4], [5, 6]).set([7], [8, 9]);
+      //   for (let val of map5) {
+      //     console.log(val[1]);
+      //   }
+
+      //   let map6 = new Map();
+      //   map6.set([1], [2, 3]).set([4], [5, 6]).set([7], [8, 9]);
+      //   for (let val of map6) {
+      //     console.log(val[1][1]);
+      //   }
+
+      //   // forEach loop
+      //   let map7 = new Map();
+      //   map7.set("js", 800).set("designing", 400).set("java", 700);
+      //   map7.forEach(test);
+      //   function test(val, key) {
+      //     console.log(val, key);
+      //   }
+
+      //   let map8 = new Map();
+      //   map8.set([1], [2, 3]).set([4], [5, 6]).set([7], [8, 9]);
+      //   map8.forEach(test2);
+      //   function test2(key, val) {
+      //     console.log(key);
+      //   }
+
+      //   let map9 = new Map();
+      //   map9.set([1], [2, 3]).set([4], [5, 6]).set([7], [8, 9]);
+      //   map9.forEach(test3);
+      //   function test3(key, val) {
+      //     console.log(val);
+      //   }
+
+      //   let map10 = new Map();
+      //   map10.set([1], [2, 3]).set([4], [5, 6]).set([7], [8, 9]);
+      //   map10.forEach(test2);
+      //   function test2(key, val) {
+      //     console.log(key[0]);
+      //   }
+
+      // // 1. Create a new Map and add key-value pairs to it.
+      // let newMap = new Map();
+      // newMap.set("name", "Joya").set("lastName", "Deshwali").set("age", 18);
+      // console.log(newMap);
+
+      // // 2. Get the value of a specific key in a Map.
+      // console.log(newMap.get("name"));
+
+      // // 3. Check if a key exists in a Map.
+      // console.log(newMap.has("lastName"));
+
+      // // 4. Iterate over the keys of a Map using a for...of loop.
+      // for (let val of newMap) {
+      //   console.log(val[0]);
+      // }
+
+      // // 5. Iterate over the values of a Map using a for...of loop
+      // for (let val of newMap) {
+      //   console.log(val[1]);
+      // }
+
+      // // 6. Iterate over the key-value pairs of a Map using a for...of loop.
+      // for (let val of newMap) {
+      //   console.log(val[0], val[1]);
+      // }
+
+      // // 7. Convert a Map to an array of key-value pairs.
+      // console.log([...newMap]);
+
+      // // 8. Convert an array of key-value pairs to a Map.
+      // let arrayToMap = new Map(newMap);
+      // console.log(arrayToMap);
+
+      // // 9. Use the forEach() method to iterate over the key-value pairs of a Map.
+      // arrayToMap.forEach(check);
+      // function check(val, key) {
+      //   console.log(key, val);
+      // }
+
+      // // 10. Use the Map keys() method to get an iterator for the keys of a Map.
+      // console.log(arrayToMap.keys());
+
+      // // 11. Use the Map values() method to get an iterator for the values of a Map.
+      // console.log(arrayToMap.values());
+
+      // // 12. Use the Map entries() method to get an iterator for the key-value pairs of a Map.
+      // console.log(arrayToMap.entries());
+
+      // // 13. Use the Map has() method to check if a Map contains a key.
+      // console.log(arrayToMap.has("age"));
+
+      // // 14. Use the Map get() method to get the value associated with a key in a Map.
+      // if (arrayToMap.has("age")) {
+      //   console.log(arrayToMap.get("age"));
+      // } else {
+      //   console.log("No");
+      // }
+
+      // // 15. Use the Map set() method to add a new key-value pair to a Map.
+      // let myNewSet = new Map();
+      // myNewSet.set("Wecode", "Academy").set("JavaScript", 15000);
+      // console.log(myNewSet);
+
+      // // 16. Use the Map delete() method to remove a key-value pair from a Map
+      // myNewSet.delete("Wecode");
+      // console.log(myNewSet);
+
+      // // 17. Use the Map clear() method to remove all key-value pairs from a Map.
+      // myNewSet.clear();
+      // console.log(myNewSet);
+
+      // // 18. Use the Object.fromEntries() method to create a new object from a Map.
+      // let entries = new Map([
+      //   ["foo", "bar"],
+      //   ["baz", 42],
+      // ]);
+      // let newmap = Object.fromEntries(entries);
+      // console.log(newmap);
+
+      // // 19. Use the Map constructor to create a new Map from an array of key-value pairs.
+      // let keyValuePairs = [
+      //   ["key1", "value1"],
+      //   ["key2", "value2"],
+      //   ["key3", "value3"],
+      // ];
+      // let myMap = new Map(keyValuePairs);
+      // console.log(myMap.get("key1"));
+
+      ////////////
+      let arr = [
+        1, 2, 3, 1, 4, 2, 5, 3, 6, 5, 4, 3, 6, 7, 8, 9, 0, 4, 3, 4, 6, 5, 6,
+      ];
+      let arrMap = new Map();
+      for (let key of arr) {
+        if (arrMap.has(key)) {
+          let val = arrMap.get(key) + 1;
+          arrMap.set(key, val);
+        } else {
+          arrMap.set(key, 1);
+        }
+      }
+      console.log(arrMap);
+      // 1. tarika
+      let arr1 = [
+        1, 2, 2, 2, 2, 1, 2, 3, 4, 5, 6, 1, 1, 7, 8, 9, 10, 11, 2, 1, 4, 6, 7,
+      ];
+      let map = new Map();
+      for (let key of arr1) {
+        if (map.has(key)) {
+          let value = map.get(key) + 1;
+          map.set(key, value);
+        } else {
+          map.set(key, 1);
+        }
+      }
+      console.log(map);
+      let max = 0;
+      let num = 0;
+      for (let value of map) {
+        if (value[1] > max) {
+          num = value[0];
+          max = value[1];
+        }
+      }
+      console.log(num, max);
+
+      // 2nd tarika
+      let arr2 = [
+        1, 2, 2, 2, 2, 1, 2, 3, 4, 5, 6, 1, 1, 7, 8, 9, 10, 11, 2, 1, 4, 6, 7,
+      ];
+      let map1 = new Map();
+      let max1 = 0;
+      let num1 = 0;
+      for (let key of arr1) {
+        if (map1.has(key)) {
+          let value = map1.get(key) + 1;
+          map1.set(key, value);
+          if (max1 < value) {
+            max1 = value;
+            num1 = key;
+          }
+        } else {
+          map1.set(key, 1);
+        }
+      }
+      console.log(num1, max1);
+    </script>
+  </body>
+</html>

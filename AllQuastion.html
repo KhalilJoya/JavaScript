@@ -1,0 +1,1568 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+          1. ek number lena hai.
+          -> kya number odd hai ?
+          -> agar odd hai to kya 7 ka multiple hai ?
+          -> Kya number me 15 add krne pr vah number 120 ke brabar hai
+             Yadi teeno condition true hai to ek date ka object lena hai vah us date object me jo number
+             lia hai us number date ki minutes me add krke time print krvana hai
+             Else conditon false hai to tume aaj ki date ko milliseconds me console me print krvana hai
+      */
+      let num0 = 85;
+      if (num0 % 2 != 0 && num0 % 7 === 0 && num0 + 15 === 120) {
+        let d = new Date();
+        d.setMinutes(d.getMinutes + num0);
+        console.log(d);
+      } else {
+        console.log(Date.UTC(num0));
+      }
+
+      /*
+      2.  ek number lena hia yadi vah number even hai to 100 print krna hai
+          otherwise vhi number print krna hai
+          But is solution ko 3 tarike se krna hai
+          if else
+          ternary operator
+          || operator Short circuiting
+      */
+      //Using if else
+      let num1 = 31;
+      let num2 = 100;
+      if (num1 % 2 === 0) {
+        console.log(num2);
+      } else {
+        console.log(num1);
+      }
+
+      //Using ternary operator
+      num1 % 2 === 0 ? console.log(num2) : console.log(num1);
+
+      //Using Short Circuting
+      let ans = num1 % 2 === 0 || num1;
+      if (ans === num1) {
+        console.log(num1);
+      } else {
+        console.log(num2);
+      }
+
+      /*
+          3. value leni hai country population
+             agar vah population 1.3 crore se jyada hai to China print krna hia
+             agar 1.3 se kam and 1 crore se jyada to India print krna hai
+             else Pakistan is question ko switch case se krna hai
+          */
+      let population = 1.1;
+      if (population >= 1.3) {
+        console.log("China");
+      } else if (population < 1.3 && population > 1) {
+        console.log("India");
+      } else {
+        console.log("Pakistan");
+      }
+
+      let desigain = true;
+      switch (desigain) {
+        case population >= 1.3:
+          console.log("China");
+          break;
+        case population < 1.3 && population > 1:
+          console.log("India");
+          break;
+        default:
+          console.log("Pakistan");
+          break;
+      }
+
+      /*
+          4. My Name is Sajid Ali Khan. Zahid bhai jyada bolte hain. Inko chup krana pdega.
+             Is string me Sajid ko Zahid se and Zahid ko Sajid se replace krna hai. aur chup ko silent
+             se replace krna hai. Iske alava jitne b words hai is string me vo sb words ka phle character
+             Capital hona chahiye. Finally tume converted String print krvani hai
+             My Name Is Zahid Ali Khan. Sajid Bhai Jyada Bolte Hain. Inko Chup Krana Pdega
+          */
+      let str =
+        "my mame is sajid ali khan. zahid bhai jyada bolte hain. Inko chup krana pdega";
+      let arr0 = str.split(" ");
+      for (let i = 0; i < arr0.length; i++) {
+        arr0[i] = arr0[i]
+          .substring(0, 1)
+          .toUpperCase()
+          .concat(arr0[i].slice(1));
+        if (arr0[i].toLowerCase() == "sajid") {
+          arr0.splice(i, 1, "Zahid");
+        } else if (arr0[i].toLowerCase() == "zahid") {
+          arr0.splice(i, 1, "Sajid");
+        } else if (arr0[i].toLowerCase() == "chup") {
+          arr0.splice(i, 1, "silent");
+        }
+      }
+      console.log(arr0.join(" "));
+
+      /*
+      5. string ka 0 index ko upperCase karna he or baki ko lowerCase karna he reduce function
+       */
+      str = "hello my name is khalil khan";
+      let ans1 = str.split(" ").reduce(function (answer, value) {
+        return answer + " " + (value[0].toUpperCase() + value.slice(1));
+      }, "");
+      console.log(ans1);
+
+      /*
+          5. 9581894461 is number ko convert krna hai
+             ***189xxxx
+          */
+      let moNum = "9881894461";
+      let sub = moNum.substring(3, 6);
+      let pad = sub.padStart(6, "*");
+      let padE = pad.padEnd(pad.length + moNum.slice(6).length, "x");
+      console.log(padE);
+
+      /*
+          6. Ye pattern print krna hia
+             *****
+             ****
+             ***
+             **
+             *
+             **
+             ***
+             ****
+             *****
+          */
+      for (let i = 1; i <= 5; i++) {
+        for (let j = i; j <= 5; j++) {
+          document.write("*");
+        }
+        document.write("<br>");
+      }
+      for (let i = 2; i <= 5; i++) {
+        for (let j = 1; j <= i; j++) {
+          document.write("*");
+        }
+        document.write("<br>");
+      }
+
+      /*
+          7.  Array [1,2,3,4,5,6,7] answer 65
+              har number ko 10 se multiply krna hai
+              check krna hia kaunsa number 50 se bda hai
+              jo b numbers bachenge unka sum krna hia
+              sare numbers ka sum krne ke bad un numbers ka average btana hai
+          */
+      let arr2 = [1, 2, 3, 4, 5, 6, 7];
+      let sum = 0;
+      let ave = 0;
+      let arr3 = arr2.forEach(function (val) {
+        let arr = val * 10;
+        if (50 < arr) {
+          ave += arr;
+        } else {
+          sum += arr;
+        }
+      });
+      console.log(sum);
+      console.log(ave / 2);
+
+      ///////////////
+      let arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      let length = 0;
+      let ans2 = arr1
+        .map(function (val) {
+          return val * 10;
+        })
+        .filter(function (val) {
+          return val > 50;
+        })
+        .reduce(function (total, val) {
+          ++length;
+          return total + val;
+        });
+      console.log(ans2 / length);
+
+      /*
+          9. Ek object1 bnana hai person details ka and iski deep copy krni hai
+          String me convert krna hai. fir Dubara se Object bnana hai Object2
+          if object1 === object2
+          Yes/No print krvana hai
+          Object2 se object destructring krke name, mobile and pincode print krvana hai
+          */
+      let person1 = {
+        myName: "Khalil Joya",
+        mobile: 907983575,
+        address: {
+          city: "jaipur",
+          pincode: 302012,
+        },
+      };
+
+      let person2 = JSON.parse(JSON.stringify(person1));
+      if (person1 === person2) {
+        console.log("yes");
+      } else {
+        let {
+          myName,
+          mobile,
+          address: { pincode },
+        } = person2;
+        console.log(myName, mobile, pincode);
+      }
+
+      /*
+          10. [1,2,3,4,1,2,3,1,2,3,1,5,6,7,4,1]
+              Tume ye btana hai ki kaunsa number kitni bar repeat hua hai aur kaunsa number maximum bar repeat hua hia
+              1:5
+              2:4
+              Number 1 total 10 times repeat hua hai
+          */
+      let arr = [1, 2, 3, 4, 1, 2, 3, 1, 2, 3, 2, 2, 2, 1, 5, 6, 7, 4, 1];
+      let map = new Map();
+      let max = 1;
+      let num = 0;
+      for (let key of arr) {
+        let value = map.get(key);
+        if (value) {
+          let newValue = value + 1;
+          map.set(key, newValue);
+          if (max < newValue) {
+            max = newValue;
+            num = key;
+          }
+        } else {
+          map.set(key, 1);
+        }
+      }
+      console.log(map);
+      console.log(`Number ${num} total ${max} bar repeat hoa hai`);
+
+      // 1.
+      const iteam = ["a", "b", "a", "a", "b", "c", "d", "e"];
+      function CountDuplicates(data) {
+        const ans = {};
+        data.forEach((a) => {
+          ans[a] = (ans[a] || 0) + 2;
+        });
+        return ans;
+      }
+      console.log(CountDuplicates(iteam));
+
+      // 2.
+      const Name = "My name is Khalil Khan Joya";
+      function reverse(val) {
+        const arr = val.split(" ");
+        arr.reverse();
+        return arr.join(" * ");
+      }
+      console.log(reverse(Name));
+
+      // 3.
+      const input = "My name is Khalil Khan Joya";
+      function reverse1(val1) {
+        const arr1 = val1.split(" ");
+        const ans = arr1.map((a) => {
+          return a.split("").reverse().join("");
+        });
+
+        return ans.join("  ");
+      }
+      console.log(reverse1(input));
+
+      // 4.
+      const names = "My name is Khalil Khan Joya";
+      function add(value) {
+        const arr2 = value.split(" ");
+        arr2.sort((a, b) => {
+          return a.length - b.length;
+        });
+        return arr2.join(" ");
+      }
+      console.log(add(names));
+
+      // 5.
+      const x = "Skills I Must Know Before I Learn Javascript";
+      const ans0 = x.split("I").join("You");
+      console.log(ans0);
+
+      // 6. Write a JavaScript function to get the week start date.
+      function startOfWeek(date02) {
+        let diff =
+          date02.getDate() - date02.getDay() + (date02.getDay() === 0 ? -6 : 1);
+        return new Date(date02.setDate(diff));
+      }
+      date02 = new Date();
+      console.log(startOfWeek(date02).toString());
+
+      // 7. Write a JavaScript function to get the week end date.
+      function endOfWeek(date) {
+        var lastday = date.getDate() - (date.getDay() - 1) + 6;
+        return new Date(date.setDate(lastday));
+      }
+      date01 = new Date();
+      console.log(endOfWeek(date01).toString());
+
+      // 8. Write a JavaScript function to get the month start date
+      function startOfMonth(date) {
+        return new Date(date.getFullYear(), date.getMonth(), 1);
+      }
+      date02 = new Date();
+      console.log(startOfMonth(date02).toString());
+
+      // 9. Write a JavaScript function to get the month end date
+      function endOfMonth(date) {
+        return new Date(date.getFullYear(), date.getMonth() + 1, 0);
+      }
+      date3 = new Date();
+      console.log(endOfMonth(date3).toString());
+
+      // 10.  Write a JavaScript function to check if a given date is between two other dates
+      let date = "01/01/2003";
+      let date1 = "01/01/2005";
+      let date2 = "01/01/2007";
+      if (date <= date1 && date2 >= date1) {
+        console.log("Yes");
+      } else {
+        console.log("No");
+      }
+
+      //
+      let d1 = new Date("2002-1-1");
+      let d2 = new Date("2003-1-1");
+      let d3 = new Date("2004-1-1");
+
+      function date001(dt1, dt2, dt3) {
+        let date1 = Date.UTC(dt1.getDay(), dt1.getMonth(), dt1.getFullYear());
+        let date2 = Date.UTC(dt2.getDay(), dt2.getMonth(), dt2.getFullYear());
+        let date3 = Date.UTC(dt3.getDay(), dt3.getMonth(), dt3.getFullYear());
+        if (date1 < date2 && date2 < date3) {
+          console.log("True");
+        } else {
+          console.log("false");
+        }
+      }
+      date001(d1, d2, d3);
+
+      /* 11. Ek students ki list bnani hai. array total students 10
+          Ek map bnana hai.usme key student ka name hoga au value ek array hoga.Array me month ki entry hogi
+           Nodejs
+          random number niklana hai random number 20 tak
+          agar random number javascript ke students ki index aati hai to ye check krna hai ki us student ne atleast 3 months ki fees di hai ya ni
+          agar javascript ka student hai plus 3 months ki fees di hai to uska nodejs me admission krdo */
+
+      let javaScriptStudents = [
+        "Khalil",
+        "Sameer",
+        "Ashraf",
+        "Rafik",
+        "Shermohammad",
+        "Nadim",
+        "Sohal",
+        "Arman",
+        "Farman",
+        "Hakam",
+      ];
+      let studentFeesMap = new Map();
+      studentFeesMap
+        .set(javaScriptStudents[0], [1, 2, 3])
+        .set(javaScriptStudents[1], [1, 2, 3])
+        .set(javaScriptStudents[2], [1, 3])
+        .set(javaScriptStudents[3], [1, 2, 3, 4, 5])
+        .set(javaScriptStudents[4], [])
+        .set(javaScriptStudents[5], [1])
+        .set(javaScriptStudents[6], [1, 2])
+        .set(javaScriptStudents[7], [1, 2, 3])
+        .set(javaScriptStudents[8], [1, 2])
+        .set(javaScriptStudents[9], [1, 2, 3]);
+      let promise = new Promise(function (success, fail) {
+        let studentIndex = Math.trunc(Math.random() * 20);
+        let y = studentFeesMap.get(javaScriptStudents[studentIndex]);
+        try {
+          if (javaScriptStudents[studentIndex] && y.length >= 3) {
+            success();
+          } else {
+            fail();
+          }
+        } catch (error) {
+          console.log(error);
+        }
+      });
+
+      promise
+        .then(
+          () => admission(),
+          () => rejected()
+        )
+        .then(() => {
+          console.log("Deposit fees");
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+
+      function admission() {
+        console.log("addmission kardo");
+      }
+
+      function rejected() {
+        console.log("Admission denied");
+        throw new Error("Student admission not allowed");
+      }
+
+      // 1. 3 ki table for, while and do while loop
+      // for loop
+      for (let i = 1; i <= 10; i++) {
+        console.log(`3 * ${i} = ${3 * i}`);
+      }
+
+      // while loop
+      let xy = 0;
+      while (xy < 10) {
+        xy++;
+        console.log(`4 * ${xy} = ${4 * xy}`);
+      }
+
+      // do while loop
+      let y = 0;
+      do {
+        y++;
+        console.log(`5 * ${y} = ${5 * y}`);
+      } while (y < 10);
+
+      // 2. print pattern
+      //  5, 15, 25, 35, 45, 50
+      let z = 5;
+      for (let i = 1; i <= 6; i++) {
+        if (z < 45 || z === 45) {
+          console.log(z);
+          z += 10;
+        } else {
+          console.log(z - 5);
+        }
+      }
+
+      // 3.   print pattern
+      //      0510152025
+      //      30354045
+      //      505560
+      //      6570
+      //      75
+      let count = 1;
+      for (let i = 5; i >= 1; i--) {
+        let val = "";
+        for (let j = 1; j <= i; j++) {
+          if (count === 1) {
+            val += "0";
+          }
+          val += count * 5;
+          count++;
+        }
+        console.log(val);
+      }
+
+      // 4.  1 se leke 100 ke bich me jitne even numbe hia vo print krvane hai
+      for (let a = 1; a <= 100; a++) {
+        if (a % 2 === 0) {
+          console.log(a);
+        }
+      }
+
+      // 5. 1 se leke 1000 ke bich me jitne b numbers jo ki 15 && 45 se divisible hai vo print krvane hain
+      for (let i = 1; i <= 1000; i++) {
+        if (i % 15 === 0 && i % 45 === 0) {
+          console.log(i);
+        }
+      }
+
+      // 6. print pattern
+      //    12345
+      //    1234
+      //    123
+      //    12
+      //    1
+      // document me
+      for (let c = 5; c >= 1; c--) {
+        for (let d = 1; d <= c; d++) {
+          document.write(d);
+        }
+        document.write("<br>");
+      }
+
+      // 0.1  console me
+      for (let i = 5; i >= 1; i--) {
+        let val = "";
+        for (let j = 1; j <= i; j++) {
+          val += j;
+        }
+        console.log(val);
+      }
+
+      // 7. print pattern
+      //    54321
+      //    5432
+      //    543
+      //    54
+      //    5
+      //    document me
+      for (let i = 1; i <= 5; i++) {
+        for (let j = 5; j >= i; j--) {
+          document.write(j);
+        }
+        document.write("<br>");
+      }
+
+      // 0.1 console me
+      for (let i = 1; i <= 5; i++) {
+        let val = "";
+        for (let j = 5; j >= i; j--) {
+          val += j;
+        }
+        console.log(val);
+      }
+
+      // 8. Write a program to calculate the sum of first 10 natural number.
+      let sum1 = 0;
+      for (let i = 1; i <= 20; i++) {
+        if (i <= 10) {
+          sum1 += i;
+        }
+      }
+      console.log(sum1);
+
+      // 9. Switch Case
+      let marks = 18;
+      switch (marks) {
+        case "Trigno":
+        case "Apti":
+        case "Math":
+        case "Quant":
+          console.log("Mathmetics");
+          break;
+        case "English":
+        case "Tense":
+        case "Active":
+          console.log("Passive English");
+          break;
+        case true:
+          console.log("JavaScript");
+          break;
+        case false:
+          console.log("Java");
+          break;
+        case "Turkey":
+        case "India":
+          console.log("Japan Country");
+          break;
+        case "Rajasthan":
+          console.log("Biggest State");
+          break;
+        case "Delhi":
+          console.log("Captial");
+          break;
+        case 18:
+          console.log("Adult");
+          break;
+        case 11:
+          console.log("Minor");
+          break;
+        default:
+          console.log("Hello JAvaScript");
+          break;
+      }
+
+      // 10.  break ka use
+      for (let i = 1; i <= 50; i++) {
+        if (i % 2 === 1) {
+          continue;
+        }
+        if (i > 40) {
+          break;
+        }
+        console.log(i);
+      }
+
+      // 11. string ko space se split krke length btani hai
+      let str00 = "My name is Wecode Academy";
+      let split = str00.split(" ");
+      console.log(split.length);
+
+      // 12.
+      let str11 = "abaBa";
+      let strLowerCase = str11.toLowerCase();
+      let rev = "";
+      let strArr = [...strLowerCase];
+      for (let i = strArr.length - 1; i >= 0; i--) {
+        rev = rev + strArr[i];
+      }
+      if (rev === strLowerCase) {
+        console.log("Yes");
+      } else {
+        console.log("No");
+      }
+
+      // 13. Number pattern
+      // 95818*****
+      let num12 = "95818";
+      let ans12 = num12.padStart(10, "*");
+      console.log(ans12);
+
+      // *****94461
+      let num11 = "94461";
+      console.log(num11.padEnd(10, "*"));
+
+      // 958**944**
+      let num22 = "9581894461";
+      let a = num22.substring(0, 3);
+      let b = a.padEnd(5, "*");
+      let c = num22.substring(5, 8);
+      let d = c.padEnd(5, "*");
+      let ans3 = b.concat(d);
+      console.log(ans3);
+      // 0.1
+      let num44 = num22.slice(0, 3).padEnd(5, "*");
+      let num55 = num22.slice(5, 8).padEnd(5, "*");
+      let num66 = num44.concat(num55);
+      console.log(num66);
+
+      // 14.
+      let str5 = "ymedacaA edoceW";
+      let rev1 = "";
+      let strArr1 = [...str5];
+      for (let i = strArr1.length - 1; i >= 0; i--) {
+        rev1 = rev1 + strArr1[i];
+      }
+      console.log(rev1);
+
+      // 15.
+      let str0 = "khalil joya";
+      let str2 = str0.charAt(0).toUpperCase();
+      let str3 = str0.slice(1);
+      console.log(str2.concat(str3));
+
+      // 16.
+      let str4 = "mY nAME IS kHALIL jOYA";
+      let newStr = "";
+      for (let val of str4) {
+        val === val.toUpperCase()
+          ? (newStr += val.toLowerCase())
+          : (newStr += val.toUpperCase());
+      }
+      console.log(newStr);
+
+      // 17.
+      let str6 = "My  name is khalil joya";
+      let arr11 = str6.split(" ");
+      let newStr2 = "";
+      for (let i = 0; i < arr11.length; i++) {
+        if (i === 0) {
+          newStr2 = newStr2 + arr11[i].toLowerCase();
+        } else {
+          newStr2 +=
+            arr11[i].charAt(0).toUpperCase() + arr11[i].slice(1).toLowerCase();
+        }
+      }
+      console.log(newStr2);
+
+      // 18. Function declaration
+      function sumf(num1, num2, num3, num4) {
+        console.log(num1 + num2 + num3 + num4);
+      }
+      sumf(100, 200, 300, 400);
+
+      // 19. function expression
+      const add1 = function (num1, num2, num3, num4) {
+        console.log(num1 + num2 + num3 + num4);
+      };
+      add1(100, 200, 300, 400);
+
+      // 20. Function declaration
+      function oddEven(num1) {
+        if (num1 % 2 === 0) {
+          console.log("Even");
+        } else {
+          console.log("Odd");
+        }
+      }
+      oddEven(2);
+
+      // 21. function expression
+      const add01 = function (num1) {
+        if (num1 % 2 === 0) {
+          console.log("Even");
+        } else {
+          console.log("Odd");
+        }
+      };
+      add01(1);
+
+      // 22. Function declaration
+      function plus(num1, num2) {
+        if (num1 % 2 !== 0 && num1 < 100) {
+          return "Yes";
+        } else if (num2 % 2 === 0 && num2 > 400) {
+          return "No";
+        } else {
+          return "Hello";
+        }
+      }
+      let ans22 = plus(10, 402);
+      console.log(ans22);
+
+      // 23.
+      // *****
+      // ****
+      // ***
+      // **
+      // *
+      for (let i = 5; i >= 1; i--) {
+        let ans = "";
+        for (let j = 1; j <= i; j++) {
+          ans = ans + "*";
+        }
+        console.log(ans);
+      }
+
+      // 24.
+      // *
+      // **
+      // ***
+      // ****
+      // *****
+      for (let i = 1; i <= 5; i++) {
+        let ans = "";
+        for (let j = 1; j <= i; j++) {
+          ans = ans + "*";
+        }
+        console.log(ans);
+      }
+
+      // 25.
+      for (let i = 5; i >= 1; i--) {
+        for (let j = 1; j <= i; j++) {
+          document.write(j);
+        }
+        document.write("<br>");
+      }
+
+      // 26.
+      for (let i = 5; i >= 1; i--) {
+        for (let j = i; j >= 1; j--) {
+          document.write(j);
+        }
+        document.write("<br>");
+      }
+
+      // 27.
+      for (let i = 5; i >= 1; i--) {
+        let ans = "";
+        for (let j = 1; j <= 5; j++) {
+          document.write("$");
+        }
+        document.write("<br>");
+      }
+
+      // 28.
+      // *****
+      // ****
+      // ***
+      // **
+      // *
+      // *
+      // **
+      // ***
+      // ****
+      // *****
+      for (let i = 5; i >= 1; i--) {
+        let ans = "";
+        for (let j = 1; j <= i; j++) {
+          ans = ans + "*";
+        }
+        console.log(ans);
+      }
+      for (let i = 1; i <= 5; i++) {
+        let ans = "";
+        for (let j = 1; j <= i; j++) {
+          ans = ans + "*";
+        }
+        console.log(ans);
+      }
+
+      // 29.
+      for (let i = 10; i >= 1; i--) {
+        for (let j = i; j >= 1; j--) {
+          document.write(j);
+        }
+        document.write("<br>");
+      }
+
+      // 30.
+      function odd(num1) {
+        if (num1 % 2 === 0) {
+          return "Even";
+        } else {
+          return "odd";
+        }
+      }
+      const ans00 = odd(20);
+      console.log(ans00);
+
+      // 31.
+      function printtable(num) {
+        for (let a = 1; a <= 10; a++) {
+          console.log(`${num} * ${a} = ${num * a}`);
+        }
+      }
+      printtable(10);
+
+      // 32.
+      function printNum(num1) {
+        for (let a = 1; a <= num1; a++) {
+          console.log(a);
+        }
+      }
+      printNum(100);
+
+      // 33.
+      function max01(a, b, c) {
+        console.log(Math.max(a, b, c));
+      }
+      max01(10, 20, 30);
+
+      // 0.1
+      function max02(num1, num2, num3) {
+        let max = num1;
+        if (num2 > max) {
+          max = num2;
+        }
+        if (num3 > max) {
+          max = num3;
+        }
+        console.log(max);
+      }
+      max02(10, 120, 100);
+
+      // 34.
+      function str01(a) {
+        if (a.length > 10) {
+          console.log("Big");
+        } else {
+          console.log("Small");
+        }
+      }
+      str01("Khalil Joya");
+
+      // 35. type of
+      function value(a) {
+        console.log(typeof a);
+      }
+      value(2);
+      value("Khalil");
+      value(true);
+      value(null);
+
+      // 36.
+      function multi(a, b) {
+        for (let x = 1; x <= b; x++) {
+          if (a * x <= b) console.log(a * x);
+        }
+      }
+      multi(2, 200);
+
+      // 37.
+      function clu(a, b, c) {
+        if (c === "+") {
+          console.log(a + b);
+        } else if (c === "-") {
+          console.log(a - b);
+        } else if (c === "*") {
+          console.log(a * b);
+        } else if (c === "/") {
+          console.log(a / b);
+        } else if (c === "%") {
+          console.log(a % b);
+        }
+      }
+      clu(10, 20, "+");
+
+      // 38. function declaration
+      function max02(num1, num2, num3) {
+        let max = num1;
+        if (num2 > max) {
+          max = num2;
+        }
+        if (num3 > max) {
+          max = num3;
+        }
+        console.log(max);
+      }
+      max02(10, 40, 30);
+
+      // 39 function expression
+      const max1 = function (num1, num2, num3) {
+        let max = num1;
+        if (num2 > max) {
+          max = num2;
+        }
+        if (num3 > max) {
+          max = num3;
+        }
+        console.log(max);
+      };
+      max1(100, 20, 300);
+
+      // 40. Arrow function
+      const max3 = (num1, num2, num3) => {
+        let max = num1;
+        if (num2 > max) {
+          max = num2;
+        }
+        if (num3 > max) {
+          max = num3;
+        }
+        console.log(max);
+      };
+      max3(123, 122, 200);
+
+      // Q1.add, minus, mul, divide ye 4 functions bnane hai using arrow function and also without return
+      const add02 = (num1, num2) => num1 + num2;
+      console.log(add02(20, 20));
+
+      const minus = (num1, num2) => num1 - num2;
+      console.log(minus(40, 30));
+
+      const mul = (num1, num2) => num1 * num2;
+      console.log(mul(50, 50));
+
+      const divide = (num1, num2) => num1 / num2;
+      console.log(divide(10, 10));
+
+      // Q2. calculator, function expression me bnana hai. Prompt me tume operation puchna
+      //     hai. operation jaise add, divide, +, -, plus, minus fir usse 2 numbers puchne hain aur
+      //     operation kran hai
+      const calculator = function () {
+        let opertor = prompt(
+          "What operation do you want to do with two number"
+        );
+        let num1 = +prompt("Enter first number");
+        let num2 = +prompt("Enter second number");
+        if (opertor === "+" || opertor === "plus") {
+          console.log(num1 + num2);
+        } else if (opertor === "-" || opertor === "minus") {
+          console.log(Math.abs(num1 - num2));
+        } else if (opertor === "*" || opertor === "multipal") {
+          console.log(num1 * num2);
+        } else if (opertor === "/" || opertor === "divide") {
+          console.log(num1 / num2);
+        } else {
+          console.log("Not a operator");
+        }
+      };
+      calculator();
+
+      // Q3. function slice, ek string pass krni hai. ek starting indexedDB, 2nd end index,
+      //     aur fir vo slice krke vo string return krni hai. agar index galat di hai to error print
+      //     krni hai using console.error
+      function slice(str, start, end) {
+        if (start >= 0 && str.length >= end) {
+          return str.substring(start, end);
+        } else {
+          console.error("Sorry Incorrect index");
+        }
+      }
+      console.log(slice("Wecode Academy", 0, 14));
+
+      // Q4. function repeat, first argument ek string pass krni hai. 2nd argument me number
+      // pass krna hai. di gyi string ko 1 se leke number tak repeat krvana hai using loop.
+      // repeat function ka use ni krna hai. khud ka repeat function bnana hai
+      const repeat = function (str, num) {
+        for (let i = 1; i <= num; i++) {
+          let str1 = "";
+          for (let j = 1; j <= i; j++) {
+            str1 += str;
+          }
+          console.log(str1);
+        }
+      };
+      repeat("Hello ", 10);
+
+      // Q5.
+      // function concat, 5 string deni hai arugments me aur un 5 string ko concat krke
+      // return krna hai using arrow function
+      const concat = (...str) => {
+        let conStr = "";
+        for (let val of str) {
+          conStr += val;
+        }
+        return conStr;
+      };
+      console.log(concat("Hello ", "my ", "name ", "is ", "Khalil Khan"));
+
+      // Q6. padStart and padEnd function ko khudse bnana hai without using string function.
+      // function padding(start, end, str, sym, num) {}
+      // padding(true, false, "Wecode", "*", 5);
+      // *** Wecode
+      // padding(false, true, "Sajid", "**", 5);
+      // Wecode ****
+      function addPadding(start, end, str, sym, num) {
+        let strSym = "";
+        if (start) {
+          for (let i = 1; i <= num; i++) {
+            strSym += sym;
+          }
+          return strSym.concat(str);
+        } else if (end) {
+          for (let i = 1; i <= num; i++) {
+            strSym += sym;
+          }
+          return str.concat(strSym);
+        }
+      }
+      console.log(addPadding(true, false, "Wecode", "*", 5));
+
+      // Q7. function printPyramid(str, num, rev) {}
+      // printPyramid("*", 5, false);
+      // *
+      // **
+      // ***
+      // ****
+      // *****
+      const printPattern = function (str, num, rev) {
+        if (num > 0 && rev) {
+          for (let i = 1; i <= num; i++) {
+            console.log(str.repeat(i));
+          }
+        } else if (num > 0 && !rev) {
+          for (let i = 1; i <= num; i++) {
+            console.log(str.repeat(i));
+          }
+        }
+      };
+      printPattern("*", 5, true);
+
+      // Q.8 printPyramid("wecode", 5, true);
+      // wecodewecodewecodewecodewecode
+      // wecodewecodewecodewecode
+      // wecodewecodewecode
+      // wecodewecode
+      // wecode
+      const printPatter = function (str, num, rev) {
+        if (num > 0 && rev) {
+          for (let i = num; i >= 1; i--) {
+            console.log(str.repeat(i));
+          }
+        } else if (num > 0 && !rev) {
+          for (let i = 1; i <= num; i++) {
+            console.log(str.repeat(i));
+          }
+        }
+      };
+      printPatter("wecode", 10, true);
+
+      // Q9. function game()
+      //   user se name puchna hai.then user ka mobile number puchan hai, then user se birthyear puchni
+      //   hai.agar user ki age 18 + ho ri hai to usse 3 question puchne hai.Agar vo 3 question ke answer
+      //   shi deta hia to Congratulations otherwise Sorry you  have lost the game show krnaa hai using
+      //   alert box age user ki age 18 se kam hai to message show kro "You are not allowed to play the game."
+      function game() {
+        let name = prompt("What is your name");
+        if (name) {
+          let number = prompt("What is your mobile number");
+          if (number) {
+            if (number.length === 10) {
+              if (Number(number)) {
+                let DOB = Number(prompt("What is your birthyear"));
+                const currentYear = new Date().getFullYear();
+                const age = Math.abs(DOB - currentYear);
+                if (age >= 18) {
+                  let flag = false;
+                  let Q1 = prompt("How much 20 / 2");
+                  if (Q1 === "10") {
+                    flag = true;
+                    Q1 = prompt("How much 2000 + 10000 - 8000");
+                  }
+                  if (Q1 === "4000" && flag) {
+                    flag = true;
+                    Q1 = +prompt("How much 2 * 2");
+                  }
+                  if (Q1 === 4 && flag) {
+                    console.log(`Congratulation ${name} for winner the game`);
+                  } else {
+                    console.log(`Sorry ${name} you  have lost the game `);
+                  }
+                } else {
+                  console.log("You are not allowed to play the game.");
+                }
+              } else {
+                console.error("please enter only number ");
+              }
+            } else {
+              console.error("please enter number only 10 digit");
+            }
+          } else {
+            console.error("enter your mobile number");
+          }
+        } else {
+          console.error("please enter your name");
+        }
+      }
+      game();
+
+      // Q11.
+      // Print below Pattern
+      // $##$##$
+      // $##$##
+      // $##$
+      // $##
+      // $
+      for (let i = 10; i >= 1; i--) {
+        let str = "";
+        for (let j = 1; j <= i; j++) {
+          if (j % 2 === 0) {
+            str = str + "##";
+          } else {
+            str = str + "$";
+          }
+        }
+        console.log(str);
+      }
+
+      // Q12.
+      // Ask the user question "How many times do you want to print Series".Then print below
+      // series.For example below series will print if user enteres 5
+      // 2, 6, 30, 260, 3130 Find the pattern for above series and print accordingly.If the user
+      // enters 10 then we will print the same series numbers till 10 times.
+      let result = "";
+      for (let i = 1; i <= 10; i++) {
+        result = i ** i + i;
+        console.log(result);
+      }
+
+      // Q13. Using a switch case to do this exercise
+      // If number is odd then print Odd
+      // If number is even then print Even
+      // If number is 100 then print 100
+      // Else print 10000
+      let val = 21 % 2;
+      switch (val) {
+        case 1:
+          console.log("Odd");
+          break;
+        case 0:
+          console.log("Even");
+          break;
+        case 100:
+          console.log(100);
+          break;
+        default:
+          console.log(10000);
+          break;
+      }
+
+      // // Q14. Ask user his/her birth year, "What is your birth year?"
+      // // If user age is greater than 18 then ask user "Do you have valid license number?"
+      // // If user click on Okay then ask for his license number and finally in the alert show
+      // // message "User with license number #### is ready to drive."
+      // // If user age is less than 18 then ask him question in confirm box "Do you have gaurdians ?
+      // // "" If user says yes then ask his/her Gaurdian name and then in alert show "You are ready
+      // // to drive with your ####(show gaurdian name here.)" Else show "Sorry visit again please."
+      // // in alert box
+      // let currentYear = new Date().getFullYear();
+      // let userDofB = +prompt("Enter your Date of Brith");
+      // let userAge = Math.abs(currentYear - userDofB);
+
+      // if (userAge > 18) {
+      //   let userAns = confirm("Do you have valid license number ?");
+      //   if (userAns) {
+      //     let licenseNumber = +prompt("Enter your valid license");
+      //     if (licenseNumber) {
+      //       alert(
+      //         `User with license number ${licenseNumber} is ready to drive.`
+      //       );
+      //     } else {
+      //       alert("Enter licinse number");
+      //     }
+      //   }
+      // } else {
+      //   let gaurdianCheck = confirm("Do you have gaurdians ?");
+      //   if (gaurdianCheck) {
+      //     let gaurdianName = prompt("Enter your gaurdian name");
+      //     alert(`You are ready to drive with your gaurdian ${gaurdianName}`);
+      //   } else {
+      //     alert("Sorry visit again please.");
+      //   }
+      // }
+
+      // // 0.2
+      // let year = Number(prompt("What is your birth year?"));
+      // let age = 2023 - year;
+      // if (age > 18) {
+      //   let ans = confirm("Do you have valid license number?");
+      //   if (ans) {
+      //     let license = prompt("What is your license number?");
+      //     alert(`User with license number ${license} is ready to drive.`);
+      //   } else {
+      //     alert("Sorry, please visit again");
+      //   }
+      // } else {
+      //   let ans = confirm("Do you have gaurdians ?");
+      //   if (ans) {
+      //     let gaurdian = prompt("What is your gaurdian name?");
+      //     alert(`You are ready to drive with ${gaurdian}`);
+      //   } else {
+      //     alert("Sorry, please visit again");
+      //   }
+      // }
+
+      // Q15. Take any number and take other number as 19. Now check their difference by
+      // subtracting each other. If both numbers difference is greater than 19 then print
+      // triple their absolute difference else print double their absolute difference.
+      let num01 = 30;
+      let num02 = 19;
+      let diff;
+      if (num01 - num02 < 0) {
+        diff = (num01 - num02) * -1;
+      } else {
+        diff = num01 - num02;
+      }
+      console.log(diff);
+      if (diff > 19) {
+        console.log(diff * 3);
+      } else {
+        console.log(diff * 2);
+      }
+
+      // Q16. Write a JavaScript program to check from two given integers, whether one is
+      // positive and another one is negative.If yes then print sum of both the numbers
+      // Else print multiplication of both numbers
+      let num3 = -10;
+      let num4 = 20;
+      if ((num3 < 0 && num4 > 0) || (num3 > 0 && num4 < 0)) {
+        console.log(num3 + num4);
+      } else {
+        console.log(num3 * num4);
+      }
+
+      // Q17. Write a JavaScript program to check if out of 4 numbers any two numbers are
+      // same or not. If yes then print Yes else print No.
+      let num5 = 10;
+      let num6 = 190;
+      let num7 = 99;
+      let num8 = 10;
+      if (
+        num5 === num6 ||
+        num6 === num7 ||
+        num7 === num8 ||
+        num8 === num5 ||
+        num7 === num5 ||
+        num8 === num6
+      ) {
+        console.log("Yes");
+      } else {
+        console.log(num5, num6, num7, num8);
+      }
+
+      // Q18. Write a program to check if a number is palindrome or not. It means 141 and
+      // 12221 both are examples of palindrome number. If number is palindrome then print
+      // yes else print no
+      let num9 = 12221;
+      let str02 = num9.toString();
+      let str1 = "";
+      for (let i = 1; i <= str02.length; i++) {
+        str1 += str02.at(-i);
+      }
+      Number(str02) === +str1 ? console.log("Yes") : console.log("No");
+
+      // Q19. Take a String and check its length. If string length is greater than 10 then
+      // print from 1 to length of the string. else print No
+      let str03 = "WEcode";
+      let len = str03.length;
+      if (len > 10) {
+        for (let i = 1; i <= len; i++) {
+          console.log(i);
+        }
+      } else {
+        console.log("No");
+      }
+
+      // 1. Create an array called fruits that contains the following elements: "apple", "banana", "orange". Now check if "orange" is in the fruits array.
+      let fruits = ["apple", "banana", "orange"];
+      if (fruits.includes("orange")) {
+        console.log("Yes");
+      } else {
+        console.log("No");
+      }
+
+      // 2. Given an array of numbers, write a function that returns the sum of all the even numbers in the array.
+      let myArray5 = [1, 2, 3, 4, 5, 6, 7, 8];
+      let result2 = sumEven(myArray5);
+      function sumEven(arr) {
+        return arr.reduce(function (sum, num) {
+          if (num % 2 === 0) {
+            return sum + num;
+          } else {
+            return sum;
+          }
+        }, 0);
+      }
+      console.log(result2);
+
+      // 3. Given two arrays of numbers, write a function that returns a new array that contains only the unique elements from both arrays.
+      let array1 = [1, 2, 3, 6, 7, 3];
+      let array2 = [2, 3, 4, 5, 6, 6, 7, 8];
+      let uniqueArray = unique(array1, array2);
+      function unique(array1, array2) {
+        let combinedArray = array1.concat(array2);
+        let uniqueArray = [];
+        for (let i = 0; i < combinedArray.length; i++) {
+          if (!uniqueArray.includes(combinedArray[i])) {
+            uniqueArray.push(combinedArray[i]);
+          }
+        }
+        return uniqueArray;
+      }
+      console.log(uniqueArray);
+
+      // 5. Write a function that takes an array of numbers and returns the largest number in the array
+      let arr12 = [1, 2, 1000, 20, 30, 500];
+      let largestNum = 0;
+      arr12.forEach((val) => {
+        if (largestNum < val) {
+          largestNum = val;
+        }
+      });
+      console.log(largestNum);
+
+      // 6. Write a function that takes an array of numbers and returns a new array that only contains the even numbers from the original array
+      let arrEven = [1, 10, 20, 3044, 43];
+      let evenNum = arrEven.filter((val) => val % 2 === 0);
+      console.log(evenNum);
+
+      // 7. Write a function that takes an array of strings and returns a new array that only contains strings with more than 5 characters.
+      let myArr1 = ["Hello", "code", "academy", "everyone"];
+      let filteredArray = filterStrings(myArr1);
+      function filterStrings(arr) {
+        let filtered = arr.filter((str) => str.length > 5);
+        return filtered;
+      }
+      console.log(filteredArray);
+
+      // 8. Write a function that takes two arrays of numbers and returns a new array that contains the intersection of the two arrays (i.e. only the numbers that appear in both arrays).
+      let myArray1 = [1, 4, 7, 2, 9, 3, 8, 6];
+      let myArray2 = [3, 8, 5, 6, 10, 1];
+      let intersectedArray = intersection(myArray1, myArray2);
+      function intersection(arr1, arr2) {
+        let intersected = arr1.filter((num) => arr2.includes(num));
+        return intersected;
+      }
+      console.log(intersectedArray);
+
+      // 9. Write a function that takes an array of numbers and returns a new array where each element is the square of the original element
+      let myArray3 = [1, 4, 7, 2, 9, 3, 8, 6];
+      let squaredArray = squareArray(myArray3);
+      function squareArray(arr) {
+        let squared = arr.map((num) => num * num);
+        return squared;
+      }
+      console.log(squaredArray);
+
+      // 10. Write a function that takes an array of numbers and returns the average of all the numbers in the array.
+      let myArray4 = [1, 4, 7, 2, 9, 3, 8, 6];
+      let avg = average(myArray4);
+      function average(arr) {
+        let sum = arr.reduce((total, num) => total + num);
+        let avg = sum / arr.length;
+        return avg;
+      }
+      console.log(avg);
+
+      // 11. Write a function that takes an array of numbers and returns a new array that only contains numbers that are greater than 5. Use filter function
+      let myArray = [1, 4, 7, 2, 9, 3, 8, 6];
+      let newArray = filte(myArray);
+      function filte(arr) {
+        return arr.filter((num) => num > 5);
+      }
+      console.log(newArray);
+
+      // 12. Write a function that takes an array of numbers and returns a new array where each element is the original element plus 1. use map function
+      let arrMap = [10, 20, 30, 40];
+      let ansMap = addOne(arrMap);
+      function addOne(arrMap) {
+        let ansMap = arrMap.map((num) => num + 1);
+        return ansMap;
+      }
+      console.log(ansMap);
+
+      // 15. Write a function that takes an array of strings and sorts them by their length in ascending order.
+      let myArr = ["apple", "banana", "cherry", "date"];
+      let result1 = sortStrings(myArr);
+      function sortStrings(arr) {
+        arr.sort(function (a, b) {
+          return a.length - b.length;
+        });
+
+        return arr;
+      }
+      console.log(result1);
+
+      // 19. Write a function that takes an array of numbers and returns a new array with the numbers sorted in ascending order.
+      let arrSort = [1, 110, 2, 11, 22, 3, 21, 33];
+      function test(val1, val2) {
+        return val1 - val2;
+      }
+      console.log(arrSort.sort(test));
+
+      // 20. Write a function that takes an array of strings and flattens each string into an array of characters, then flattens the result into a single array
+      let arraySplit = ["Wecode", "Academy"];
+      let ans11 = flattenStrings(arraySplit);
+      function flattenStrings(arr) {
+        return arr.flatMap(function (str) {
+          let chars = str.split("");
+          return chars;
+        });
+      }
+      console.log(ans11);
+
+      // 1. Write a JavaScript program to check whether a string "Code" presents at 5th (index 4) position in a given string, if "Code" presents in the string return the string without "Code" otherwise return the original one.
+      let inputString = "knjnCodeWorld";
+      if (inputString.substring(4, 8) === "Code") {
+        console.log(inputString.substring(0, 4) + inputString.substring(8));
+      } else {
+        console.log(inputString);
+      }
+
+      // 2. Write a JavaScript program to capitalize the first letter of each word of a given string.
+      let str12 = "wecode Academy";
+      let ans13 = str12.slice(0, 1).toUpperCase();
+      let lower = str12.slice(1, str12.length).toLowerCase();
+      let concat1 = ans13.concat(lower);
+      console.log(concat1);
+      //
+      let str13 = "wecode academy wecode academy wecode Academy";
+      let ans14 = str13.split(" ");
+      for (let i = 0; i < ans14.length; i++) {
+        ans14[i] = ans14[i].charAt(0).toUpperCase() + ans14[i].slice(1);
+        bb = ans14.join(" ");
+      }
+      console.log(bb);
+      //
+      let str22 = "We are learning JavaScript in Jaipur.";
+      let newStr1 = "";
+      let index = 0;
+      for (let val of str22.split(" ")) {
+        if (index % 2 === 0) {
+          newStr1 += " " + val.toUpperCase();
+        } else {
+          newStr1 += " " + val.toLowerCase();
+        }
+        ++index1;
+      }
+      console.log(newStr1);
+
+      // 3. Write a JavaScript program to check whether all the digits in a given number are the same or not.
+      let num17 = 4444454;
+      let numStr = nunum17.toString();
+      for (let i = 0; i < numStr.length - 1; i++) {
+        if (numStr[i] !== numStr[i + 1]) {
+          console.log(num17 + " does not have all the same digits.");
+          break;
+        } else {
+          console.log(num17 + " has all the same digits.");
+        }
+      }
+
+      // 8. Create an array of numbers. Now filter out all the numbers from the array where number is in between 30-50. After filtering the numbers, add 20 to each number and finally print the sum of all numbers using reduce function.
+      function arrNum(arr) {
+        return arr
+          .filter((num) => num >= 30 && num <= 50)
+          .map((num) => num + 20)
+          .reduce((total, num) => total + num);
+      }
+      console.log(arrNum([45, 30, 35, 38, 48]));
+
+      // 9. Convert below array
+      let arr18 = [
+        [1, 2],
+        [3, 4],
+        [5, 6],
+        [7, 8],
+        [9, 10],
+      ];
+      let result11 = arr18.flatMap((arr) => arr[0] + arr[1]);
+      console.log(result11);
+
+      // 10. Print below pattern
+      for (let i = 1; i <= 5; i++) {
+        let str = "";
+        for (let j = 1; j <= i - 1; j++) {
+          str += " ";
+        }
+        for (let k = i; k <= 5; k++) {
+          str += k + " ";
+        }
+        console.log(str);
+      }
+
+      // Q10. Create Bill Calculator
+      // Ask below Questions
+      // How many french fries(60rs per piece) do you want to order ?
+      // How many burgers(50rs per piece) do you want to order ?
+      // How many plates of chowmin(100rs per plate) do you want to order ?
+      // How many plates of Manchurian(80rs per plate) do you want to order ?
+      // How many Cokes(50 per piece) do you want to order ?
+      // Use can enter any number of quantities.Calculate the bill based on the quantities
+      // entered and item prices.If user enteres 0 or negative value then consider item count as 0.
+      // const fries = 60;
+      // const burger = 50;
+      // const chowmin = 100;
+      // const manchurian = 80;
+      // const coke = 50;
+      // const friesCount = Number(
+      //   prompt("How many french fries (60rs per piece) do you want to order ?")
+      // );
+      // const burgersCount = Number(
+      //   prompt("How many burgers (50rs per piece) do you want to order ?")
+      // );
+      // const chowminCount = Number(
+      //   prompt(
+      //     "How many plates of chowmin (100rs per plate) do you want to order?"
+      //   )
+      // );
+      // const manchurianCount = Number(
+      //   prompt(
+      //     "How many plates of Manchurian (80rs per plate) do you want to order?"
+      //   )
+      // );
+      // const cokeCount = Number(
+      //   prompt("How many Cokes (50 per piece) do you want to order ?")
+      // );
+      // let total = 0;
+      // if (friesCount > 0) {
+      //   total = total + fries * friesCount;
+      // }
+
+      // if (burgersCount > 0) {
+      //   total = total + burger * burgersCount;
+      // }
+
+      // if (chowminCount > 0) {
+      //   total = total + chowmin * chowminCount;
+      // }
+
+      // if (manchurianCount > 0) {
+      //   total = total + manchurian * manchurianCount;
+      // }
+
+      // if (cokeCount > 0) {
+      //   total = total + coke * cokeCount;
+      // }
+
+      // console.log("Total : " + total);
+    </script>
+  </body>
+</html>
