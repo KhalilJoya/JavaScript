@@ -1164,60 +1164,61 @@
           break;
       }
 
-      // // Q14. Ask user his/her birth year, "What is your birth year?"
-      // // If user age is greater than 18 then ask user "Do you have valid license number?"
-      // // If user click on Okay then ask for his license number and finally in the alert show
-      // // message "User with license number #### is ready to drive."
-      // // If user age is less than 18 then ask him question in confirm box "Do you have gaurdians ?
-      // // "" If user says yes then ask his/her Gaurdian name and then in alert show "You are ready
-      // // to drive with your ####(show gaurdian name here.)" Else show "Sorry visit again please."
-      // // in alert box
-      // let currentYear = new Date().getFullYear();
-      // let userDofB = +prompt("Enter your Date of Brith");
-      // let userAge = Math.abs(currentYear - userDofB);
+      /* Q14. Ask user his/her birth year, "What is your birth year?"
+      If user age is greater than 18 then ask user "Do you have valid license number?"
+      If user click on Okay then ask for his license number and finally in the alert show
+      message "User with license number #### is ready to drive."
+      If user age is less than 18 then ask him question in confirm box "Do you have gaurdians ?
+      "" If user says yes then ask his/her Gaurdian name and then in alert show "You are ready
+      to drive with your ####(show gaurdian name here.)" Else show "Sorry visit again please."
+      in alert box
+      */
+      let currentYear = new Date().getFullYear();
+      let userDofB = +prompt("Enter your Date of Brith");
+      let userAge = Math.abs(currentYear - userDofB);
 
-      // if (userAge > 18) {
-      //   let userAns = confirm("Do you have valid license number ?");
-      //   if (userAns) {
-      //     let licenseNumber = +prompt("Enter your valid license");
-      //     if (licenseNumber) {
-      //       alert(
-      //         `User with license number ${licenseNumber} is ready to drive.`
-      //       );
-      //     } else {
-      //       alert("Enter licinse number");
-      //     }
-      //   }
-      // } else {
-      //   let gaurdianCheck = confirm("Do you have gaurdians ?");
-      //   if (gaurdianCheck) {
-      //     let gaurdianName = prompt("Enter your gaurdian name");
-      //     alert(`You are ready to drive with your gaurdian ${gaurdianName}`);
-      //   } else {
-      //     alert("Sorry visit again please.");
-      //   }
-      // }
+      if (userAge > 18) {
+        let userAns = confirm("Do you have valid license number ?");
+        if (userAns) {
+          let licenseNumber = +prompt("Enter your valid license");
+          if (licenseNumber) {
+            alert(
+              `User with license number ${licenseNumber} is ready to drive.`
+            );
+          } else {
+            alert("Enter licinse number");
+          }
+        }
+      } else {
+        let gaurdianCheck = confirm("Do you have gaurdians ?");
+        if (gaurdianCheck) {
+          let gaurdianName = prompt("Enter your gaurdian name");
+          alert(`You are ready to drive with your gaurdian ${gaurdianName}`);
+        } else {
+          alert("Sorry visit again please.");
+        }
+      }
 
       // // 0.2
-      // let year = Number(prompt("What is your birth year?"));
-      // let age = 2023 - year;
-      // if (age > 18) {
-      //   let ans = confirm("Do you have valid license number?");
-      //   if (ans) {
-      //     let license = prompt("What is your license number?");
-      //     alert(`User with license number ${license} is ready to drive.`);
-      //   } else {
-      //     alert("Sorry, please visit again");
-      //   }
-      // } else {
-      //   let ans = confirm("Do you have gaurdians ?");
-      //   if (ans) {
-      //     let gaurdian = prompt("What is your gaurdian name?");
-      //     alert(`You are ready to drive with ${gaurdian}`);
-      //   } else {
-      //     alert("Sorry, please visit again");
-      //   }
-      // }
+      let year = Number(prompt("What is your birth year?"));
+      let age = 2023 - year;
+      if (age > 18) {
+        let ans = confirm("Do you have valid license number?");
+        if (ans) {
+          let license = prompt("What is your license number?");
+          alert(`User with license number ${license} is ready to drive.`);
+        } else {
+          alert("Sorry, please visit again");
+        }
+      } else {
+        let ans = confirm("Do you have gaurdians ?");
+        if (ans) {
+          let gaurdian = prompt("What is your gaurdian name?");
+          alert(`You are ready to drive with ${gaurdian}`);
+        } else {
+          alert("Sorry, please visit again");
+        }
+      }
 
       // Q15. Take any number and take other number as 19. Now check their difference by
       // subtracting each other. If both numbers difference is greater than 19 then print
@@ -1508,61 +1509,62 @@
         console.log(str);
       }
 
-      // Q10. Create Bill Calculator
-      // Ask below Questions
-      // How many french fries(60rs per piece) do you want to order ?
-      // How many burgers(50rs per piece) do you want to order ?
-      // How many plates of chowmin(100rs per plate) do you want to order ?
-      // How many plates of Manchurian(80rs per plate) do you want to order ?
-      // How many Cokes(50 per piece) do you want to order ?
-      // Use can enter any number of quantities.Calculate the bill based on the quantities
-      // entered and item prices.If user enteres 0 or negative value then consider item count as 0.
-      // const fries = 60;
-      // const burger = 50;
-      // const chowmin = 100;
-      // const manchurian = 80;
-      // const coke = 50;
-      // const friesCount = Number(
-      //   prompt("How many french fries (60rs per piece) do you want to order ?")
-      // );
-      // const burgersCount = Number(
-      //   prompt("How many burgers (50rs per piece) do you want to order ?")
-      // );
-      // const chowminCount = Number(
-      //   prompt(
-      //     "How many plates of chowmin (100rs per plate) do you want to order?"
-      //   )
-      // );
-      // const manchurianCount = Number(
-      //   prompt(
-      //     "How many plates of Manchurian (80rs per plate) do you want to order?"
-      //   )
-      // );
-      // const cokeCount = Number(
-      //   prompt("How many Cokes (50 per piece) do you want to order ?")
-      // );
-      // let total = 0;
-      // if (friesCount > 0) {
-      //   total = total + fries * friesCount;
-      // }
+      /* Q10. Create Bill Calculator
+      Ask below Questions
+      How many french fries(60rs per piece) do you want to order ?
+      How many burgers(50rs per piece) do you want to order ?
+      How many plates of chowmin(100rs per plate) do you want to order ?
+      How many plates of Manchurian(80rs per plate) do you want to order ?
+      How many Cokes(50 per piece) do you want to order ?
+      Use can enter any number of quantities.Calculate the bill based on the quantities
+      entered and item prices.If user enteres 0 or negative value then consider item count as 0.
+      */
+      const fries = 60;
+      const burger = 50;
+      const chowmin = 100;
+      const manchurian = 80;
+      const coke = 50;
+      const friesCount = Number(
+        prompt("How many french fries (60rs per piece) do you want to order ?")
+      );
+      const burgersCount = Number(
+        prompt("How many burgers (50rs per piece) do you want to order ?")
+      );
+      const chowminCount = Number(
+        prompt(
+          "How many plates of chowmin (100rs per plate) do you want to order?"
+        )
+      );
+      const manchurianCount = Number(
+        prompt(
+          "How many plates of Manchurian (80rs per plate) do you want to order?"
+        )
+      );
+      const cokeCount = Number(
+        prompt("How many Cokes (50 per piece) do you want to order ?")
+      );
+      let total = 0;
+      if (friesCount > 0) {
+        total = total + fries * friesCount;
+      }
 
-      // if (burgersCount > 0) {
-      //   total = total + burger * burgersCount;
-      // }
+      if (burgersCount > 0) {
+        total = total + burger * burgersCount;
+      }
 
-      // if (chowminCount > 0) {
-      //   total = total + chowmin * chowminCount;
-      // }
+      if (chowminCount > 0) {
+        total = total + chowmin * chowminCount;
+      }
 
-      // if (manchurianCount > 0) {
-      //   total = total + manchurian * manchurianCount;
-      // }
+      if (manchurianCount > 0) {
+        total = total + manchurian * manchurianCount;
+      }
 
-      // if (cokeCount > 0) {
-      //   total = total + coke * cokeCount;
-      // }
+      if (cokeCount > 0) {
+        total = total + coke * cokeCount;
+      }
 
-      // console.log("Total : " + total);
+      console.log("Total : " + total);
     </script>
   </body>
 </html>

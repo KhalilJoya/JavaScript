@@ -6,413 +6,418 @@
   </head>
   <body>
     <script>
-      //  // 1. Create an array with three elements and print out the second element.
-      //  let arr = [10,20,30]
-      //  console.log(arr[1])    // Output : 20
+      // 1. Create an array with three elements and print out the second element.
+      let arr = [10, 20, 30];
+      console.log(arr[1]); // Output : 20
 
-      //  // 2. Create an array with five elements and print out the length of the array.
-      //  let arr1 =[10,20,30,40,50]
-      //  console.log(arr1.length)  // Output : 5
+      // 2. Create an array with five elements and print out the length of the array.
+      let arr1 = [10, 20, 30, 40, 50];
+      console.log(arr1.length); // Output : 5
 
-      //  // 3. Create an array with four elements and print out each element using a for loop.
-      //  let arr2 = [1,2,3,4]
-      //  for(let x = 0 ; x < arr2.length;x++){
-      //   console.log(arr2[x])      // Output : 1 2 3 4
-      //  }
+      // 3. Create an array with four elements and print out each element using a for loop.
+      let arr2 = [1, 2, 3, 4];
+      for (let x = 0; x < arr2.length; x++) {
+        console.log(arr2[x]); // Output : 1 2 3 4
+      }
 
-      //  // 4. Create an array with six elements and print out each element using a forEach loop.
-      //  let arr3 = [1,2,3,4,5,6]
-      //  arr3.forEach(element => {
-      //   console.log(element)       // Output : 1 2 3 4 5 6
-      //  });
+      // 4. Create an array with six elements and print out each element using a forEach loop.
+      let arr3 = [1, 2, 3, 4, 5, 6];
+      arr3.forEach((element) => {
+        console.log(element); // Output : 1 2 3 4 5 6
+      });
 
-      //  // 5. Create an array with three elements and add a fourth element to the end of the array.
-      //  let arr4 = [100,200,300]
-      //  arr4.push(400)
-      //  console.log(arr4)      // Output : [100, 200, 300, 400]
+      // 5. Create an array with three elements and add a fourth element to the end of the array.
+      let arr4 = [100, 200, 300];
+      arr4.push(400);
+      console.log(arr4); // Output : [100, 200, 300, 400]
 
-      //  // 6. Create an array with four elements and remove the second element.
-      //  let arr5 =[10,20,30,40]
-      //  console.log(arr5.slice(1,2))    // Output : [20]
-      //  console.log(arr5.splice(1,1))   // Output : [20]
+      // 6. Create an array with four elements and remove the second element.
+      let arr5 = [10, 20, 30, 40];
+      console.log(arr5.slice(1, 2)); // Output : [20]
+      console.log(arr5.splice(1, 1)); // Output : [20]
 
-      //  /* Second Tarika */
-      //  arr5.slice(1,2)
-      //  console.log(arr5)              // Output : [10, 30, 40]
-      //  arr5.splice
-      //  console.log(arr5)             // Output : [10, 30, 40]
+      /* Second Tarika */
+      arr5.slice(1, 2);
+      console.log(arr5); // Output : [10, 30, 40]
+      arr5.splice;
+      console.log(arr5); // Output : [10, 30, 40]
 
-      //  // 7. Create an array with five elements and remove the last element.
-      //  let arr6 =[10,20,30,40,50]
-      //  console.log(arr6.pop())         // Output : 50
+      // 7. Create an array with five elements and remove the last element.
+      let arr6 = [10, 20, 30, 40, 50];
+      console.log(arr6.pop()); // Output : 50
 
-      //  /* Second Tarika */
-      //  arr6.pop()
-      //  console.log(arr6)              // Output : [10, 20, 30]
+      /* Second Tarika */
+      arr6.pop();
+      console.log(arr6); // Output : [10, 20, 30]
 
-      //  // 8. Create an array with three elements and check if the array includes a specific value.
-      //  let arr7 = [1,2,3];
-      //  console.log(arr7.includes(1,0))    // Output : true
+      // 8. Create an array with three elements and check if the array includes a specific value.
+      let arr7 = [1, 2, 3];
+      console.log(arr7.includes(1, 0)); // Output : true
 
-      // // 9. Create an array with four elements and sort the array in ascending order.
-      // let arr8 = [10,50,20,32]
-      // function ascending(num1,num2){
-      //  return num1 - num2
-      // }
-      // console.log(arr8.sort(ascending))     // Output : [10, 20, 32, 50]
+      // 9. Create an array with four elements and sort the array in ascending order.
+      let arr8 = [10, 50, 20, 32];
+      function ascending(num1, num2) {
+        return num1 - num2;
+      }
+      console.log(arr8.sort(ascending)); // Output : [10, 20, 32, 50]
 
-      // // 10. Create an array with five elements and sort the array in descending order.
-      // let arr9 = [10,50,20,32,8]
-      // function descending(num1,num2){
-      //  return num2 - num1
-      // }
-      // console.log(arr9.sort(descending))    // Output : [50, 32, 20, 10, 8]
+      // 10. Create an array with five elements and sort the array in descending order.
+      let arr9 = [10, 50, 20, 32, 8];
+      function descending(num1, num2) {
+        return num2 - num1;
+      }
+      console.log(arr9.sort(descending)); // Output : [50, 32, 20, 10, 8]
 
-      //    // 11. Create two arrays, concatenate them and print out the resulting array.
-      //    let arr10 = [1,2,3,4,5]
-      //    let arr11 =[6,7,8,9,10]
-      //    console.log(arr10.concat(arr11))      // Output :
+      // 11. Create two arrays, concatenate them and print out the resulting array.
+      let arr10 = [1, 2, 3, 4, 5];
+      let arr11 = [6, 7, 8, 9, 10];
+      console.log(arr10.concat(arr11)); // Output :
 
-      //    /* second Tarika */
-      //    let arr0 = [1,2,3,4,5]
-      //    let arr00 =[6,7,8,9,10]
-      //    let newAr   = []
-      //    console.log(newAr.concat(arr0,arr00))      // Output :
+      /* second Tarika */
+      let arr0 = [1, 2, 3, 4, 5];
+      let arr00 = [6, 7, 8, 9, 10];
+      let newAr = [];
+      console.log(newAr.concat(arr0, arr00)); // Output :
 
-      //    // 12. Create an array with three elements and convert it to a string.
-      //    let arr12 = [1,2,3]
-      //    console.log(arr12.toString())     // Output :
+      // 12. Create an array with three elements and convert it to a string.
+      let arr12 = [1, 2, 3];
+      console.log(arr12.toString()); // Output :
 
-      //    /* Second Tarika */
-      //    let arr13 = [1,2,3];
-      //    let newArr = arr13.toString();
-      //    console.log(typeof(newArr))        // Output :
+      /* Second Tarika */
+      let arr13 = [1, 2, 3];
+      let newArr = arr13.toString();
+      console.log(typeof newArr); // Output :
 
-      //    // 13. Create an array with four elements and reverse the order of the elements.
-      //    let arr14 = [101,102,103,104]
-      //    console.log(arr14.reverse())       // Output :
+      // 13. Create an array with four elements and reverse the order of the elements.
+      let arr14 = [101, 102, 103, 104];
+      console.log(arr14.reverse()); // Output :
 
-      //    // 14. Create an array with five elements and find the index of a specific value.
-      //    let arr15 =[1,2,3,4,5]
-      //    console.log(arr15.indexOf(3))       // Output :
+      // 14. Create an array with five elements and find the index of a specific value.
+      let arr15 = [1, 2, 3, 4, 5];
+      console.log(arr15.indexOf(3)); // Output :
 
-      //    // 15. Create an array with six elements and slice the array to create a new array with the first three elements.
-      //    let arr16 =[100,200,300,400,500,600]
-      //    let ans = arr16.slice(0,3)
-      //    console.log(ans)                     // Output :
+      // 15. Create an array with six elements and slice the array to create a new array with the first three elements.
+      let arr16 = [100, 200, 300, 400, 500, 600];
+      let ans = arr16.slice(0, 3);
+      console.log(ans); // Output :
 
-      //    // 16. Create an array with six elements and use the map method to double each element.
-      //    let arr17 =[100,200,300,400,500,600]
-      //    function double(num){
-      //     return num * 2
-      //    }
-      //   console.log(arr17.map(double))           // Output :
+      // 16. Create an array with six elements and use the map method to double each element.
+      let arr17 = [100, 200, 300, 400, 500, 600];
+      function double(num) {
+        return num * 2;
+      }
+      console.log(arr17.map(double)); // Output :
 
-      //   // 17. Create an array with four elements and use the while loop to calculate the sum of all elements.
-      //   /* For loop */
-      //   let forloopArr =[100,100,200,200,400]
-      //   let sum = 0
-      //   for(let i = 0 ; i < forloopArr.length ; i++){
-      //     sum = sum + forloopArr[i]
-      //   }
-      //   console.log(sum)                      // Output :
+      // 17. Create an array with four elements and use the while loop to calculate the sum of all elements.
+      /* For loop */
+      let forloopArr = [100, 100, 200, 200, 400];
+      let sum = 0;
+      for (let i = 0; i < forloopArr.length; i++) {
+        sum = sum + forloopArr[i];
+      }
+      console.log(sum); // Output :
 
-      //   /* While loop */
-      //   let arr18 = [100, 200, 200, 200, 400];
-      //      let sum1 = 0;
-      //      let ii = 0;
-      //      while (ii < arr18.length) {
-      //             sum1 += arr18[ii];
-      //             ii++;
-      //      }
-      //      console.log(sum1);              // Output :
+      /* While loop */
+      let arr18 = [100, 200, 200, 200, 400];
+      let sum1 = 0;
+      let ii = 0;
+      while (ii < arr18.length) {
+        sum1 += arr18[ii];
+        ii++;
+      }
+      console.log(sum1); // Output :
 
-      //   /* Do While loop */
-      //   let doloop =[300,100,200,200,400];
-      //   let sum2 = 0;
-      //   let i = 0;
-      //   do {
-      //     sum2 = sum2 + doloop[i];
-      //     i++;
-      //   } while (i < doloop.length);
-      //   console.log(sum2);                 // Output :
+      /* Do While loop */
+      let doloop = [300, 100, 200, 200, 400];
+      let sum2 = 0;
+      let i = 0;
+      do {
+        sum2 = sum2 + doloop[i];
+        i++;
+      } while (i < doloop.length);
+      console.log(sum2); // Output :
 
-      //   // 18. Create an array with five elements and use the filter method to return only the even numbers.
-      //   let arr19 =[1,2,3,4,5]
-      //   function even(arr19){
-      //     return arr19 % 2 === 0;
-      //  }
-      //  let checkEven = arr19.filter(even)
-      //  console.log(checkEven)                   // Output :
+      // 18. Create an array with five elements and use the filter method to return only the even numbers.
+      let arr19 = [1, 2, 3, 4, 5];
+      function even(arr19) {
+        return arr19 % 2 === 0;
+      }
+      let checkEven = arr19.filter(even);
+      console.log(checkEven); // Output :
 
-      //  // 19. Create an array with five elements and use the filter method to return only the odd numbers.
-      //  let arr20 =[1,2,3,4,5]
-      //   function odd(arr20){
-      //     return arr20 % 2 === 1;
-      //  }
-      //  let checkodd = arr20.filter(odd)
-      //  console.log(checkodd)                      // Output :
+      // 19. Create an array with five elements and use the filter method to return only the odd numbers.
+      let arr20 = [1, 2, 3, 4, 5];
+      function odd(arr20) {
+        return arr20 % 2 === 1;
+      }
+      let checkodd = arr20.filter(odd);
+      console.log(checkodd); // Output :
 
-      //  // 20. Create an array with three elements and use the join method to concatenate the elements with a dash (-) separator.
-      //  let arr21 =[1,2,3,4,5]
-      //  console.log(arr21.join("-"))         // Output :
+      // 20. Create an array with three elements and use the join method to concatenate the elements with a dash (-) separator.
+      let arr21 = [1, 2, 3, 4, 5];
+      console.log(arr21.join("-")); // Output :
 
-      // // 21. print pattern 11 224 3339 444416 5555525
-      // for(let i=1; i<=5; i++){
-      //    console.log(i.toString().repeat(i).concat(i*i))
-      // }                                                      // Output :
+      // 21. print pattern 11 224 3339 444416 5555525
+      for (let i = 1; i <= 5; i++) {
+        console.log(
+          i
+            .toString()
+            .repeat(i)
+            .concat(i * i)
+        );
+      } // Output :
 
-      // // 22. Arr ko filter karke fir map function se multipal karna he 2 se
-      // let arr22 = [1,2,3,4,5,6,7,8,9,10]
-      // function fil(num1){
-      //    return num1 % 2 === 1
-      // }
-      // function multipal(num){
-      //    return num * 2
-      // }
-      // let ans1 = arr22.filter(fil).map(multipal)
-      // console.log(ans1)                                   // Output :
+      // 22. Arr ko filter karke fir map function se multipal karna he 2 se
+      let arr22 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      function fil(num1) {
+        return num1 % 2 === 1;
+      }
+      function multipal(num) {
+        return num * 2;
+      }
+      let ans1 = arr22.filter(fil).map(multipal);
+      console.log(ans1); // Output :
 
-      // // 23. Arr ko filter karke fir every function se 10 garterthen karna he
-      // let arr23 = [2,4,6,8,10,12,14,16,18,20]
-      // function test(num){
-      //    return num % 2 === 0
-      // }
-      // function every(num1){
-      //    return num1 > 10
-      // }
-      // ans2 = arr23.filter(test).every(every)          // Output :
-      // ans3 = arr23.filter(test).some(every)           // Output :
-      // console.log(ans2,ans3)
+      // 23. Arr ko filter karke fir every function se 10 garterthen karna he
+      let arr23 = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
+      function test(num) {
+        return num % 2 === 0;
+      }
+      function every(num1) {
+        return num1 > 10;
+      }
+      ans2 = arr23.filter(test).every(every); // Output :
+      ans3 = arr23.filter(test).some(every); // Output :
+      console.log(ans2, ans3);
 
-      // // 24. ak string leni he or array me converd karke 1st letter upperCase karna he or baki ke lowerCase karke print karna he
-      // let str = "My naMe is weCoDe acadeMy";
-      // let split = str.split(" ");
-      // let finalArr = split.reduce(test, "");
-      // function test(answer, value) {
-      //   let firstStr = value.slice(0, 1).toUpperCase();
-      //   let secondPart = value.slice(1).toLowerCase();
-      //   answer = answer + firstStr + secondPart + " ";
-      //   return answer;
-      // }
-      // console.log(finalArr);                                   // Output :
+      // 24. ak string leni he or array me converd karke 1st letter upperCase karna he or baki ke lowerCase karke print karna he
+      let str = "My naMe is weCoDe acadeMy";
+      let split = str.split(" ");
+      let finalArr = split.reduce(test, "");
+      function test(answer, value) {
+        let firstStr = value.slice(0, 1).toUpperCase();
+        let secondPart = value.slice(1).toLowerCase();
+        answer = answer + firstStr + secondPart + " ";
+        return answer;
+      }
+      console.log(finalArr); // Output :
 
-      // // 25. ak string leni he or Even str ki string ki length nikalni he
-      // let str1 = "My Name is Khalil Joya nice to meet you";
-      // let sp = str1.split(" ");
-      // let finalAns = sp.reduce(len, 0);
-      // function len(total, val) {
-      //   if (val.length % 2 === 0) {
-      //     total = total + 1;
-      //   }
-      //   return total;
-      // }
-      // console.log(sp.length,finalAns);                             // Output :
+      // 25. ak string leni he or Even str ki string ki length nikalni he
+      let str1 = "My Name is Khalil Joya nice to meet you";
+      let sp = str1.split(" ");
+      let finalAns = sp.reduce(len, 0);
+      function len(total, val) {
+        if (val.length % 2 === 0) {
+          total = total + 1;
+        }
+        return total;
+      }
+      console.log(sp.length, finalAns); // Output :
 
-      // // 26. string ki length reduce function se
-      // const arrStr = ["My", "Name", "Is", "Wecode", "Academy"];
-      // let ansStr = arrStr.reduce(test, 0);
-      // function test(total, value) {
-      //   console.log(value.length);
-      //   return total + value.length;
-      // }
-      // console.log(ansStr)                                 // Output :
+      // 26. string ki length reduce function se
+      const arrStr = ["My", "Name", "Is", "Wecode", "Academy"];
+      let ansStr = arrStr.reduce(test, 0);
+      function test(total, value) {
+        console.log(value.length);
+        return total + value.length;
+      }
+      console.log(ansStr); // Output :
 
-      // // 27. output : My Name Is Wecode Academy
-      // const Strarr = ["My", "Name", "Is", "Wecode", "Academy"];
-      // let Strans = Strarr.reduce(test);
-      // function test(str, value) {
-      //   return str + " " + value;
-      // }
-      // console.log(Strans);
+      // 27. output : My Name Is Wecode Academy
+      const Strarr = ["My", "Name", "Is", "Wecode", "Academy"];
+      let Strans = Strarr.reduce(test);
+      function test(str, value) {
+        return str + " " + value;
+      }
+      console.log(Strans);
 
-      // // 28. output : 115
-      // const arr24 = [1, 2, 3, 4, 5];
-      // let ans4 = arr24.reduce(test, 100);
-      // function test(total, value) {
-      //   console.log("total ", total);
-      //   return total + value;
-      // }
-      // console.log(ans4);
+      // 28. output : 115
+      const arr24 = [1, 2, 3, 4, 5];
+      let ans4 = arr24.reduce(test, 100);
+      function test(total, value) {
+        console.log("total ", total);
+        return total + value;
+      }
+      console.log(ans4);
 
-      // // 29.  Output : 120
-      // const arr25 = [1, 2, 3, 4, 5];
-      // let ans5 = arr25.reduce(test);
-      // function test(total, value) {
-      //   console.log("total ", total);
-      //   return total * value;
-      // }
-      // console.log(ans5);
+      // 29.  Output : 120
+      const arr25 = [1, 2, 3, 4, 5];
+      let ans5 = arr25.reduce(test);
+      function test(total, value) {
+        console.log("total ", total);
+        return total * value;
+      }
+      console.log(ans5);
 
-      // // 30. output : 15
-      // const arr26 = [1, 2, 3, 4, 5];
-      // let ans6 = arr26.reduce(test);
-      // function test(prvValue, curValue) {
-      //   return prvValue + curValue;
-      // }
-      // console.log(ans6);
+      // 30. output : 15
+      const arr26 = [1, 2, 3, 4, 5];
+      let ans6 = arr26.reduce(test);
+      function test(prvValue, curValue) {
+        return prvValue + curValue;
+      }
+      console.log(ans6);
 
-      // // 31. Output : 6
-      // const arr27 = [1, 2, 3, 4, 5];
-      // let ans7 = arr27.reduce(test, 0);
-      // function test(prvValue, curValue) {
-      //   if (curValue % 2 === 0) {
-      //     return prvValue + curValue;
-      //   } else {
-      //     return prvValue;
-      //   }
-      // }
-      // console.log(ans7);
+      // 31. Output : 6
+      const arr27 = [1, 2, 3, 4, 5];
+      let ans7 = arr27.reduce(test, 0);
+      function test(prvValue, curValue) {
+        if (curValue % 2 === 0) {
+          return prvValue + curValue;
+        } else {
+          return prvValue;
+        }
+      }
+      console.log(ans7);
 
-      // 32.
-      // let arrAge = [1, 2, 3, 4, 5];
-      // arrAge[2] = 500;
-      // console.log(arrAge);                                     // output : [1, 2, 500, 4, 5]
+      32;
+      let arrAge = [1, 2, 3, 4, 5];
+      arrAge[2] = 500;
+      console.log(arrAge); // output : [1, 2, 500, 4, 5]
 
-      // // // // // // // // // // // //     Array Method     // // // // // // // // // // // //
-      // // 1. At
-      // let arrAt = [1, 2, 3, 4, 5, 6];
-      // console.log(arrAt.at(1));                               // output : 2
-      // console.log(arrAt.at(-1));                              // output : 6
+      // // // // // // // // // // //     Array Method     // // // // // // // // // // // //
+      // 1. At
+      let arrAt = [1, 2, 3, 4, 5, 6];
+      console.log(arrAt.at(1)); // output : 2
+      console.log(arrAt.at(-1)); // output : 6
 
-      // // 2. pop
-      // let arrPop = [10, 20, 30, 40, 50, 60];
-      // arrPop.pop();
-      // console.log(arrPop);                                     // output :  [10, 20, 30, 40, 50]
+      // 2. pop
+      let arrPop = [10, 20, 30, 40, 50, 60];
+      arrPop.pop();
+      console.log(arrPop); // output :  [10, 20, 30, 40, 50]
 
-      // // 3. push
-      // let arrPush = [100, 200, 300, 400];
-      // arrPush.push(600);
-      // console.log(arrPush);                                    // output : [100, 200, 300, 400, 600]
+      // 3. push
+      let arrPush = [100, 200, 300, 400];
+      arrPush.push(600);
+      console.log(arrPush); // output : [100, 200, 300, 400, 600]
 
-      // // 4. Shift
-      // let arrShift = [10, 20, 30, 40, 50];
-      // console.log(arrShift.shift());                           // output : 10
+      // 4. Shift
+      let arrShift = [10, 20, 30, 40, 50];
+      console.log(arrShift.shift()); // output : 10
 
-      // /* Second Tarika */
-      // let arrShift1 = [10, 20, 30, 40, 50];
-      // arrShift1.shift();
-      // console.log(arrShift1);                                  // output :[20,30, 40, 50]
+      /* Second Tarika */
+      let arrShift1 = [10, 20, 30, 40, 50];
+      arrShift1.shift();
+      console.log(arrShift1); // output :[20,30, 40, 50]
 
-      // // 5. UnShift
-      // let arrUnshift = [10, 20, 30, 40, 50];
-      // console.log(arrUnshift.unshift(100, 200));               // output : 7
+      // 5. UnShift
+      let arrUnshift = [10, 20, 30, 40, 50];
+      console.log(arrUnshift.unshift(100, 200)); // output : 7
 
-      // /* Second Tarika */
-      // let arrUnshift1 = [10, 20, 30, 40, 50];
-      // arrUnshift1.unshift(200);
-      // console.log(arrUnshift1);                                // output : [200, 10, 20, 30, 40, 50]
+      /* Second Tarika */
+      let arrUnshift1 = [10, 20, 30, 40, 50];
+      arrUnshift1.unshift(200);
+      console.log(arrUnshift1); // output : [200, 10, 20, 30, 40, 50]
 
-      // // 6. Join
-      // let arrJoin = [1, 2, 3, 4];
-      // console.log(arrJoin.join("-"));                          // output : 1-2-3-4
+      // 6. Join
+      let arrJoin = [1, 2, 3, 4];
+      console.log(arrJoin.join("-")); // output : 1-2-3-4
 
-      // // 7. toString
-      // let arrString = [10, 20, 30, 40];
-      // console.log(arrString.toString());                       // output : 10,20,30,40
+      // 7. toString
+      let arrString = [10, 20, 30, 40];
+      console.log(arrString.toString()); // output : 10,20,30,40
 
-      // // 8. reverse
-      // let arrReverse = [1, 2, 3, 4, 5];
-      // console.log(arrReverse.reverse());                       // output : [5, 4, 3, 2, 1]
+      // 8. reverse
+      let arrReverse = [1, 2, 3, 4, 5];
+      console.log(arrReverse.reverse()); // output : [5, 4, 3, 2, 1]
 
-      // // 9. includes
-      // let arrIncludes = [1, 2, 3, 4, 1, 2, 5, 8];
-      // console.log(arrIncludes.includes(4));                    // output : true
+      // 9. includes
+      let arrIncludes = [1, 2, 3, 4, 1, 2, 5, 8];
+      console.log(arrIncludes.includes(4)); // output : true
 
-      // // 10. Map
-      // let arrMap = [10, 20, 30];
-      // function map(num) {
-      //   return num * num;
-      // }
-      // console.log(arrMap.map(map));                           // output : [100, 400, 900]
+      // 10. Map
+      let arrMap = [10, 20, 30];
+      function map(num) {
+        return num * num;
+      }
+      console.log(arrMap.map(map)); // output : [100, 400, 900]
 
-      // // 11. last index for length se
-      // const ages = [10, 78, 39, 4, 5];
-      // console.log(ages[ages.length - 1]);                     // output : 5
+      // 11. last index for length se
+      const ages = [10, 78, 39, 4, 5];
+      console.log(ages[ages.length - 1]); // output : 5
 
-      // for (let i = 0; i < ages.length; i++) {
-      //   console.log(ages[i]);                                  // output : 10 78 39 4 5
-      // }
+      for (let i = 0; i < ages.length; i++) {
+        console.log(ages[i]); // output : 10 78 39 4 5
+      }
 
-      // for (let i = ages.length - 1; i >= 0; i--) {
-      //   console.log(ages[i]);                                  // output : 5 4 39 78 10
-      // }
+      for (let i = ages.length - 1; i >= 0; i--) {
+        console.log(ages[i]); // output : 5 4 39 78 10
+      }
 
-      // // 12. slice
-      // let arrSlice = [1, 2, 3, 4, 5, 9, 8, 7, 10, 3, 4];
-      // console.log(arrSlice.slice(1, 4));                        // output : [2, 3, 4]
-      // console.log(arrSlice.slice(3));                           // output : [4, 5, 9, 8, 7, 10, 3, 4]
-      // console.log(arrSlice.slice(1, -2));                       // output : [2, 3, 4, 5, 9, 8, 7, 10]
-      // console.log(arrSlice.slice(-5, -2));                      // output : [8, 7, 10]
-      // console.log(arrSlice.slice(-2, -5));                      // output : []
-      // console.log(arrSlice.slice(0, -5));                       // output : [1, 2, 3, 4, 5, 9]
+      // 12. slice
+      let arrSlice = [1, 2, 3, 4, 5, 9, 8, 7, 10, 3, 4];
+      console.log(arrSlice.slice(1, 4)); // output : [2, 3, 4]
+      console.log(arrSlice.slice(3)); // output : [4, 5, 9, 8, 7, 10, 3, 4]
+      console.log(arrSlice.slice(1, -2)); // output : [2, 3, 4, 5, 9, 8, 7, 10]
+      console.log(arrSlice.slice(-5, -2)); // output : [8, 7, 10]
+      console.log(arrSlice.slice(-2, -5)); // output : []
+      console.log(arrSlice.slice(0, -5)); // output : [1, 2, 3, 4, 5, 9]
 
-      // // 13. splice
-      // let arrSplice = [1, 2, 3, 4, 5, 9, 8, 7, 10, 3, 4];
-      // arrSplice.splice(3, 3);
-      // console.log(arrSplice);                                   // output : [1, 2, 3, 8, 7, 10, 3, 4]
+      // 13. splice
+      let arrSplice = [1, 2, 3, 4, 5, 9, 8, 7, 10, 3, 4];
+      arrSplice.splice(3, 3);
+      console.log(arrSplice); // output : [1, 2, 3, 8, 7, 10, 3, 4]
 
-      // arrSplice.splice(1, 0, 111, 121, 131, 11, 21);
-      // console.log(arrSplice);                                   // output : [1, 111, 121, 131, 11, 21, 2, 3, 4, 5, 9, 8, 7, 10, 3, 4]
+      arrSplice.splice(1, 0, 111, 121, 131, 11, 21);
+      console.log(arrSplice); // output : [1, 111, 121, 131, 11, 21, 2, 3, 4, 5, 9, 8, 7, 10, 3, 4]
 
-      // arrSplice.splice(1, 4, 110, 120, 130);
-      // console.log(arrSplice);                                   // output : [1, 110, 120, 130, 21, 2, 3, 8, 7, 10, 3, 4]
+      arrSplice.splice(1, 4, 110, 120, 130);
+      console.log(arrSplice); // output : [1, 110, 120, 130, 21, 2, 3, 8, 7, 10, 3, 4]
 
-      // // 14. Filter
-      // let arrFilter = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-      // let ansFilter = arrFilter.filter(Even);
-      // function Even(num) {
-      //   return num % 2 === 0;
-      // }
-      // console.log(ansFilter);
+      // 14. Filter
+      let arrFilter = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      let ansFilter = arrFilter.filter(Even);
+      function Even(num) {
+        return num % 2 === 0;
+      }
+      console.log(ansFilter);
 
-      // let arrFilter1 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-      // let ansFilter1 = arrFilter1.filter(value);
-      // function value(num, index) {
-      //   return index % 2 === 0;
-      // }
-      // console.log(ansFilter1);
+      let arrFilter1 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      let ansFilter1 = arrFilter1.filter(value);
+      function value(num, index) {
+        return index % 2 === 0;
+      }
+      console.log(ansFilter1);
 
-      // // 15. foreach
-      // let arrForEach = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-      // let newForEach = [];
-      // arrForEach.forEach(forTest);
-      // function forTest(num) {
-      //   newForEach.push(num * 2);
-      // }
-      // console.log(newForEach);
+      // 15. foreach
+      let arrForEach = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      let newForEach = [];
+      arrForEach.forEach(forTest);
+      function forTest(num) {
+        newForEach.push(num * 2);
+      }
+      console.log(newForEach);
 
-      // // forEach se sum
-      // let arrForEach1 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-      // let newForEach1 = 0;
-      // arrForEach1.forEach(sum);
-      // function sum(num) {
-      //   newForEach1 += num;
-      // }
-      // console.log(newForEach1);
+      // forEach se sum
+      let arrForEach1 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      let newForEach1 = 0;
+      arrForEach1.forEach(sum);
+      function sum(num) {
+        newForEach1 += num;
+      }
+      console.log(newForEach1);
 
-      // let arrForEach2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-      // arrForEach2.forEach(forEachsum);
-      // function forEachsum(num, index, arr) {
-      //   arr[index] = num * 10;
-      // }
-      // console.log(arrForEach2);
+      let arrForEach2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      arrForEach2.forEach(forEachsum);
+      function forEachsum(num, index, arr) {
+        arr[index] = num * 10;
+      }
+      console.log(arrForEach2);
 
-      // // 16. find
-      // let arrFind = [10, 20, 30, 40, 50];
-      // let ansFind = arrFind.find(findTest);
-      // function findTest(num) {
-      //   return num > 20;
-      // }
-      // console.log(ansFind);
+      // 16. find
+      let arrFind = [10, 20, 30, 40, 50];
+      let ansFind = arrFind.find(findTest);
+      function findTest(num) {
+        return num > 20;
+      }
+      console.log(ansFind);
 
-      // // 17. findindex
-      // let arrFindindex = [10, 20, 30, 40, 50];
-      // let ansFindindex = arrFindindex.findIndex(findTestindex);
-      // function findTestindex(num) {
-      //   return num > 40;
-      // }
-      // console.log(ansFindindex);
+      // 17. findindex
+      let arrFindindex = [10, 20, 30, 40, 50];
+      let ansFindindex = arrFindindex.findIndex(findTestindex);
+      function findTestindex(num) {
+        return num > 40;
+      }
+      console.log(ansFindindex);
 
       // 18. some
       let arrSome = [1, 11, 3, 21, 5, 90, 8, 7, 10, 3, 4];

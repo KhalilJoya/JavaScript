@@ -5,251 +5,245 @@
   </head>
   <body>
     <script>
-      // // 1. Create an array called fruits that contains the following elements: "apple", "banana", "orange". Now check if "orange" is in the fruits array.
-      // let fruits = ["apple", "banana", "orange"];
-      // if (fruits.includes("orange")) {
-      //   console.log("Yes");
-      // } else {
-      //   console.log("No");
-      // }
+      // 1. Create an array called fruits that contains the following elements: "apple", "banana", "orange". Now check if "orange" is in the fruits array.
+      let fruits = ["apple", "banana", "orange"];
+      if (fruits.includes("orange")) {
+        console.log("Yes");
+      } else {
+        console.log("No");
+      }
 
-      // // 2. Given an array of numbers, write a function that returns the sum of all the even numbers in the array.
-      // let myArray5 = [1, 2, 3, 4, 5, 6, 7, 8];
-      // let result = sumEven(myArray5);
-      // function sumEven(arr) {
-      //   return arr.reduce(function (sum, num) {
-      //     if (num % 2 === 0) {
-      //       return sum + num;
-      //     } else {
-      //       return sum;
-      //     }
-      //   }, 0);
-      // }
-      // console.log(result);
+      // 2. Given an array of numbers, write a function that returns the sum of all the even numbers in the array.
+      let myArray5 = [1, 2, 3, 4, 5, 6, 7, 8];
+      let result = sumEven(myArray5);
+      function sumEven(arr) {
+        return arr.reduce(function (sum, num) {
+          if (num % 2 === 0) {
+            return sum + num;
+          } else {
+            return sum;
+          }
+        }, 0);
+      }
+      console.log(result);
 
-      // // 3. Given two arrays of numbers, write a function that returns a new array that contains only the unique elements from both arrays.
-      // let array1 = [1, 2, 3, 6, 7, 3];
-      // let array2 = [2, 3, 4, 5, 6, 6, 7, 8];
-      // let uniqueArray = unique(array1, array2);
-      // function unique(array1, array2) {
-      //   let combinedArray = array1.concat(array2);
-      //   let uniqueArray = [];
-      //   for (let i = 0; i < combinedArray.length; i++) {
-      //     if (!uniqueArray.includes(combinedArray[i])) {
-      //       uniqueArray.push(combinedArray[i]);
-      //     }
-      //   }
-      //   return uniqueArray;
-      // }
-      // console.log(uniqueArray);
+      // 3. Given two arrays of numbers, write a function that returns a new array that contains only the unique elements from both arrays.
+      let array1 = [1, 2, 3, 6, 7, 3];
+      let array2 = [2, 3, 4, 5, 6, 6, 7, 8];
+      let uniqueArray = unique(array1, array2);
+      function unique(array1, array2) {
+        let combinedArray = array1.concat(array2);
+        let uniqueArray = [];
+        for (let i = 0; i < combinedArray.length; i++) {
+          if (!uniqueArray.includes(combinedArray[i])) {
+            uniqueArray.push(combinedArray[i]);
+          }
+        }
+        return uniqueArray;
+      }
+      console.log(uniqueArray);
 
-      // // 4. Given an array of strings, write a function that returns the longest string in the array.
+      // 4. Given an array of strings, write a function that returns the longest string in the array.
 
-      // // 5. Write a function that takes an array of numbers and returns the largest number in the array
-      // let arr = [1, 2, 1000, 20, 30, 500];
-      // let largestNum = 0;
-      // arr.forEach((val) => {
-      //   if (largestNum < val) {
-      //     largestNum = val;
-      //   }
-      // });
-      // console.log(largestNum);
+      // 5. Write a function that takes an array of numbers and returns the largest number in the array
+      let arr = [1, 2, 1000, 20, 30, 500];
+      let largestNum = 0;
+      arr.forEach((val) => {
+        if (largestNum < val) {
+          largestNum = val;
+        }
+      });
+      console.log(largestNum);
 
-      // // 6. Write a function that takes an array of numbers and returns a new array that only contains the even numbers from the original array
-      // let arrEven = [1, 10, 20, 3044, 43];
-      // let evenNum = arrEven.filter((val) => val % 2 === 0);
-      // console.log(evenNum);
+      // 6. Write a function that takes an array of numbers and returns a new array that only contains the even numbers from the original array
+      let arrEven = [1, 10, 20, 3044, 43];
+      let evenNum = arrEven.filter((val) => val % 2 === 0);
+      console.log(evenNum);
 
-      // // 7. Write a function that takes an array of strings and returns a new array that only contains strings with more than 5 characters.
-      // let myArr1 = ["Hello", "code", "academy", "everyone"];
-      // let filteredArray = filterStrings(myArr1);
-      // function filterStrings(arr) {
-      //   let filtered = arr.filter((str) => str.length > 5);
-      //   return filtered;
-      // }
-      // console.log(filteredArray);
+      // 7. Write a function that takes an array of strings and returns a new array that only contains strings with more than 5 characters.
+      let myArr1 = ["Hello", "code", "academy", "everyone"];
+      let filteredArray = filterStrings(myArr1);
+      function filterStrings(arr) {
+        let filtered = arr.filter((str) => str.length > 5);
+        return filtered;
+      }
+      console.log(filteredArray);
 
-      // // 8. Write a function that takes two arrays of numbers and returns a new array that contains the intersection of the two arrays (i.e. only the numbers that appear in both arrays).
-      // let myArray1 = [1, 4, 7, 2, 9, 3, 8, 6];
-      // let myArray2 = [3, 8, 5, 6, 10, 1];
-      // let intersectedArray = intersection(myArray1, myArray2);
-      // function intersection(arr1, arr2) {
-      //   let intersected = arr1.filter((num) => arr2.includes(num));
-      //   return intersected;
-      // }
-      // console.log(intersectedArray);
+      // 8. Write a function that takes two arrays of numbers and returns a new array that contains the intersection of the two arrays (i.e. only the numbers that appear in both arrays).
+      let myArray1 = [1, 4, 7, 2, 9, 3, 8, 6];
+      let myArray2 = [3, 8, 5, 6, 10, 1];
+      let intersectedArray = intersection(myArray1, myArray2);
+      function intersection(arr1, arr2) {
+        let intersected = arr1.filter((num) => arr2.includes(num));
+        return intersected;
+      }
+      console.log(intersectedArray);
 
-      // // 9. Write a function that takes an array of numbers and returns a new array where each element is the square of the original element
-      // let myArray3 = [1, 4, 7, 2, 9, 3, 8, 6];
-      // let squaredArray = squareArray(myArray3);
-      // function squareArray(arr) {
-      //   let squared = arr.map((num) => num * num);
-      //   return squared;
-      // }
-      // console.log(squaredArray);
+      // 9. Write a function that takes an array of numbers and returns a new array where each element is the square of the original element
+      let myArray3 = [1, 4, 7, 2, 9, 3, 8, 6];
+      let squaredArray = squareArray(myArray3);
+      function squareArray(arr) {
+        let squared = arr.map((num) => num * num);
+        return squared;
+      }
+      console.log(squaredArray);
 
-      // // 10. Write a function that takes an array of numbers and returns the average of all the numbers in the array.
-      // let myArray4 = [1, 4, 7, 2, 9, 3, 8, 6];
-      // let avg = average(myArray4);
-      // function average(arr) {
-      //   let sum = arr.reduce((total, num) => total + num);
-      //   let avg = sum / arr.length;
-      //   return avg;
-      // }
-      // console.log(avg);
+      // 10. Write a function that takes an array of numbers and returns the average of all the numbers in the array.
+      let myArray4 = [1, 4, 7, 2, 9, 3, 8, 6];
+      let avg = average(myArray4);
+      function average(arr) {
+        let sum = arr.reduce((total, num) => total + num);
+        let avg = sum / arr.length;
+        return avg;
+      }
+      console.log(avg);
 
-      // // 11. Write a function that takes an array of numbers and returns a new array that only contains numbers that are greater than 5. Use filter function
-      // let myArray = [1, 4, 7, 2, 9, 3, 8, 6];
-      // let newArray = filte(myArray);
-      // function filte(arr) {
-      //   return arr.filter((num) => num > 5);
-      // }
-      // console.log(newArray);
+      // 11. Write a function that takes an array of numbers and returns a new array that only contains numbers that are greater than 5. Use filter function
+      let myArray = [1, 4, 7, 2, 9, 3, 8, 6];
+      let newArray = filte(myArray);
+      function filte(arr) {
+        return arr.filter((num) => num > 5);
+      }
+      console.log(newArray);
 
-      // // 12. Write a function that takes an array of numbers and returns a new array where each element is the original element plus 1. use map function
-      // let arrMap = [10, 20, 30, 40];
-      // let ansMap = addOne(arrMap);
-      // function addOne(arrMap) {
-      //   let ansMap = arrMap.map((num) => num + 1);
-      //   return ansMap;
-      // }
-      // console.log(ansMap);
+      // 12. Write a function that takes an array of numbers and returns a new array where each element is the original element plus 1. use map function
+      let arrMap = [10, 20, 30, 40];
+      let ansMap = addOne(arrMap);
+      function addOne(arrMap) {
+        let ansMap = arrMap.map((num) => num + 1);
+        return ansMap;
+      }
+      console.log(ansMap);
 
-      // // 13. Write a function that takes an array of numbers and returns a new array that contains only the unique numbers using reduce.
+      // 13. Write a function that takes an array of numbers and returns a new array that contains only the unique numbers using reduce.
 
-      // // 14. Write a function that takes an array of strings and returns the total number of characters in all the strings using reduce.
+      // 14. Write a function that takes an array of strings and returns the total number of characters in all the strings using reduce.
 
-      // // 15. Write a function that takes an array of strings and sorts them by their length in ascending order.
-      // let myArr = ["apple", "banana", "cherry", "date"];
-      // let result1 = sortStrings(myArr);
-      // function sortStrings(arr) {
-      //   arr.sort(function (a, b) {
-      //     return a.length - b.length;
-      //   });
+      // 15. Write a function that takes an array of strings and sorts them by their length in ascending order.
+      let myArr = ["apple", "banana", "cherry", "date"];
+      let result1 = sortStrings(myArr);
+      function sortStrings(arr) {
+        arr.sort(function (a, b) {
+          return a.length - b.length;
+        });
 
-      //   return arr;
-      // }
-      // console.log(result1);
+        return arr;
+      }
+      console.log(result1);
 
-      // // 16. Write a function that takes an array of numbers and returns the second highest number.
+      // 16. Write a function that takes an array of numbers and returns the second highest number.
 
-      // // 17. Write a function that takes an array of numbers and returns a new array with all the unique numbers.
+      // 17. Write a function that takes an array of numbers and returns a new array with all the unique numbers.
 
-      // // 18. Write a function that takes an array of strings and returns a new array with only the strings that contain the letter "a".
+      // 18. Write a function that takes an array of strings and returns a new array with only the strings that contain the letter "a".
 
-      // // 19. Write a function that takes an array of numbers and returns a new array with the numbers sorted in ascending order.
-      // let arrSort = [1, 110, 2, 11, 22, 3, 21, 33];
-      // function test(val1, val2) {
-      //   return val1 - val2;
-      // }
-      // console.log(arrSort.sort(test));
+      // 19. Write a function that takes an array of numbers and returns a new array with the numbers sorted in ascending order.
+      let arrSort = [1, 110, 2, 11, 22, 3, 21, 33];
+      function test(val1, val2) {
+        return val1 - val2;
+      }
+      console.log(arrSort.sort(test));
 
-      // // 20. Write a function that takes an array of strings and flattens each string into an array of characters, then flattens the result into a single array
-      // let arraySplit = ["Wecode", "Academy"];
-      // let ans = flattenStrings(arraySplit);
-      // function flattenStrings(arr) {
-      //   return arr.flatMap(function (str) {
-      //     let chars = str.split("");
-      //     return chars;
-      //   });
-      // }
-      // console.log(ans);
+      // 20. Write a function that takes an array of strings and flattens each string into an array of characters, then flattens the result into a single array
+      let arraySplit = ["Wecode", "Academy"];
+      let ans = flattenStrings(arraySplit);
+      function flattenStrings(arr) {
+        return arr.flatMap(function (str) {
+          let chars = str.split("");
+          return chars;
+        });
+      }
+      console.log(ans);
 
-      //////////////////////////////
-      /////////////////////////
-      ///////////////////////////////
-      ////////////////////////////////
-      ///////////////////////////////////
-      ///////////////////////////////
-      ////////////////////////////////////
-      // //////////////////////////////
-      // // 1. Write a JavaScript program to check whether a string "Code" presents at 5th (index 4) position in a given string, if "Code" presents in the string return the string without "Code" otherwise return the original one.
-      // let inputString = "knjnCodeWorld";
-      // if (inputString.substring(4, 8) === "Code") {
-      //   console.log(inputString.substring(0, 4) + inputString.substring(8));
-      // } else {
-      //   console.log(inputString);
-      // }
+      ////////////////////////////
 
-      // // 2. Write a JavaScript program to capitalize the first letter of each word of a given string.
-      // let str = "wecode Academy";
-      // let ans = str.slice(0, 1).toUpperCase();
-      // let lower = str.slice(1, str.length).toLowerCase();
-      // let concat = ans.concat(lower);
-      // console.log(concat);
-      // //
-      // let str1 = "wecode academy wecode academy wecode Academy";
-      // let ans1 = str1.split(" ");
-      // for (let i = 0; i < ans1.length; i++) {
-      //   ans1[i] = ans1[i].charAt(0).toUpperCase() + ans1[i].slice(1);
-      //   bb = ans1.join(" ");
-      // }
-      // console.log(bb);
-      // //
-      // let str2 = "We are learning JavaScript in Jaipur.";
-      // let newStr = "";
-      // let index = 0;
-      // for (let val of str2.split(" ")) {
-      //   if (index % 2 === 0) {
-      //     newStr += " " + val.toUpperCase();
-      //   } else {
-      //     newStr += " " + val.toLowerCase();
-      //   }
-      //   ++index;
-      // }
-      // console.log(newStr);
+      // 1. Write a JavaScript program to check whether a string "Code" presents at 5th (index 4) position in a given string, if "Code" presents in the string return the string without "Code" otherwise return the original one.
+      let inputString = "knjnCodeWorld";
+      if (inputString.substring(4, 8) === "Code") {
+        console.log(inputString.substring(0, 4) + inputString.substring(8));
+      } else {
+        console.log(inputString);
+      }
 
-      // // 3. Write a JavaScript program to check whether all the digits in a given number are the same or not.
-      // let num = 4444454;
-      // let numStr = num.toString();
-      // for (let i = 0; i < numStr.length - 1; i++) {
-      //   if (numStr[i] !== numStr[i + 1]) {
-      //     console.log(num + " does not have all the same digits.");
-      //     break;
-      //   } else {
-      //     console.log(num + " has all the same digits.");
-      //   }
-      // }
+      // 2. Write a JavaScript program to capitalize the first letter of each word of a given string.
+      let str = "wecode Academy";
+      let ans11 = str.slice(0, 1).toUpperCase();
+      let lower = str.slice(1, str.length).toLowerCase();
+      let concat = ans11.concat(lower);
+      console.log(concat);
+      //
+      let str1 = "wecode academy wecode academy wecode Academy";
+      let ans1 = str1.split(" ");
+      for (let i = 0; i < ans1.length; i++) {
+        ans1[i] = ans1[i].charAt(0).toUpperCase() + ans1[i].slice(1);
+        bb = ans1.join(" ");
+      }
+      console.log(bb);
+      //
+      let str2 = "We are learning JavaScript in Jaipur.";
+      let newStr = "";
+      let index = 0;
+      for (let val of str2.split(" ")) {
+        if (index % 2 === 0) {
+          newStr += " " + val.toUpperCase();
+        } else {
+          newStr += " " + val.toLowerCase();
+        }
+        ++index;
+      }
+      console.log(newStr);
 
-      // // 4. Write a JavaScript function that reverse a number.
+      // 3. Write a JavaScript program to check whether all the digits in a given number are the same or not.
+      let num = 4444454;
+      let numStr = num.toString();
+      for (let i = 0; i < numStr.length - 1; i++) {
+        if (numStr[i] !== numStr[i + 1]) {
+          console.log(num + " does not have all the same digits.");
+          break;
+        } else {
+          console.log(num + " has all the same digits.");
+        }
+      }
 
-      // // 5. Write a JavaScript function to extract unique characters from a string.
+      // 4. Write a JavaScript function that reverse a number.
 
-      // // 6. Write a JavaScript function to chop a string into chunks of a given length. Test Data
+      // 5. Write a JavaScript function to extract unique characters from a string.
 
-      // // 7. Write a JavaScript function to find a word within a string. Test Data :
+      // 6. Write a JavaScript function to chop a string into chunks of a given length. Test Data
 
-      // // 8. Create an array of numbers. Now filter out all the numbers from the array where number is in between 30-50. After filtering the numbers, add 20 to each number and finally print the sum of all numbers using reduce function.
-      // function arrNum(arr) {
-      //   return arr
-      //     .filter((num) => num >= 30 && num <= 50)
-      //     .map((num) => num + 20)
-      //     .reduce((total, num) => total + num);
-      // }
-      // console.log(arrNum([45, 30, 35, 38, 48]));
+      // 7. Write a JavaScript function to find a word within a string. Test Data :
 
-      // // 9. Convert below array
-      // let arr1 = [
-      //   [1, 2],
-      //   [3, 4],
-      //   [5, 6],
-      //   [7, 8],
-      //   [9, 10],
-      // ];
-      // let result = arr1.flatMap((arr) => arr[0] + arr[1]);
-      // console.log(result);
+      // 8. Create an array of numbers. Now filter out all the numbers from the array where number is in between 30-50. After filtering the numbers, add 20 to each number and finally print the sum of all numbers using reduce function.
+      function arrNum(arr) {
+        return arr
+          .filter((num) => num >= 30 && num <= 50)
+          .map((num) => num + 20)
+          .reduce((total, num) => total + num);
+      }
+      console.log(arrNum([45, 30, 35, 38, 48]));
 
-      // // 10. Print below pattern
-      // for (let i = 1; i <= 5; i++) {
-      //   let str = "";
-      //   for (let j = 1; j <= i - 1; j++) {
-      //     str += " ";
-      //   }
-      //   for (let k = i; k <= 5; k++) {
-      //     str += k + " ";
-      //   }
-      //   console.log(str);
-      // }
+      // 9. Convert below array
+      let arr1 = [
+        [1, 2],
+        [3, 4],
+        [5, 6],
+        [7, 8],
+        [9, 10],
+      ];
+      let result11 = arr1.flatMap((arr) => arr[0] + arr[1]);
+      console.log(result11);
+
+      // 10. Print below pattern
+      for (let i = 1; i <= 5; i++) {
+        let str = "";
+        for (let j = 1; j <= i - 1; j++) {
+          str += " ";
+        }
+        for (let k = i; k <= 5; k++) {
+          str += k + " ";
+        }
+        console.log(str);
+      }
 
       let obj1 = {
         name: "Khalil Joya",

@@ -102,15 +102,7 @@
 ### 9 : How do you check if a year is a leap year in JavaScript?
 
 ```
-      let year = 2023;
-      function isLeapYear(year) {
-        if (isLeapYear(year)) {
-          console.log(`${year} + is a leap year`);
-        } else {
-          console.log(` ${year} + is not a leap year`);
-        }
-      }
-      isLeapYear(year);
+   
 
 ```
 
