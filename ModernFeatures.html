@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Modern Features</title>
+  </head>
+  <body>
+    <script>
+      // // 1.  Destructuring Arrays
+      // // What is destructuring
+      // let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      // let [, a, , b, , , c] = arr;
+      // console.log(a, b, c);
+
+      // let arr1 = [10, 20, 1, 2, 33, 50];
+      // let [, , , d] = arr1;
+      // console.log(d);
+
+      // let arr2 = [10, 20, [1, 2], 33];
+      // let [, , , e] = arr2;
+      // console.log(e);
+
+      // let arr3 = [10, 20, [1, 2], 33];
+      // let [, , [, f]] = arr3;
+      // console.log(f);
+
+      // //  Reverse values using destructuring
+      // let aa = 10;
+      // let bb = 20;
+      // [aa, bb] = [bb, aa];
+      // console.log(aa, bb);
+
+      // let k = 10;
+      // let l = 20;
+      // let m = 30;
+      // [k, l, m] = [m, k, k];
+
+      // //  Return two values from function
+
+      // function test() {
+      //   return 10, 20, 30, 40;
+      // }
+      // console.log(test()); //40
+
+      // function test() {
+      //   return [10, 20, 30, 40];
+      // }
+      // console.log(test()[1]);
+
+      // // Destructuring of nested array
+      // let arr4 = [10, 20, [1, 2, [4, 5], 6, 7], 33];
+      // let [, g, [, h, [, i], , j]] = arr4;
+      // console.log(g, h, i, j);
+
+      // // Setting default values
+      // let arr5 = [10, 20];
+      // let [, n = 100, o = 500] = arr;
+      // console.log(n, o);
+
+      // // 2.  Destructuring Objects
+      // // Extract value
+      // let obj = {
+      //   name: "Khalil Joya",
+      //   age: 21,
+      //   address: {
+      //     pincode: 302012,
+      //     city: "Jaipur",
+      //     state: "Rajasthan",
+      //     customerDetails: {
+      //       customerName: "Abhinav",
+      //       mobile: 934545345,
+      //     },
+      //   },
+      // };
+      // let {
+      //   age: myAge = 100,
+      //   name,
+      //   address: {
+      //     pincode,
+      //     customerDetails: { mobile },
+      //   },
+      // } = obj;
+      // console.log(myAge, name, pincode, mobile);
+
+      // //  Different property name
+      // let obj2 = {
+      //   name: "Khalil Joya",
+      //   age: 21,
+      //   address: {
+      //     pincode: 302012,
+      //     city: "Jaipur",
+      //     state: "Rajasthan",
+      //     customerDetails: {
+      //       customerName: "Abhinav",
+      //       mobile: 934545345,
+      //     },
+      //   },
+      // };
+      // let { age: meAge = 100 } = obj2;
+      // console.log(meAge);
+
+      // // Default values
+      // let obj3 = {
+      //   name: "Khalil Joya",
+      //   age: 21,
+      //   address: {
+      //     pincode: 302012,
+      //     city: "Jaipur",
+      //     state: "Rajasthan",
+      //     customerDetails: {
+      //       customerName: "Abhinav",
+      //       mobile: 934545345,
+      //     },
+      //   },
+      // };
+      // let { age = 100 } = obj3;
+      // console.log(age);
+
+      // // Nested Object
+      // let obj4 = {
+      //   name: "Khalil Joya",
+      //   age: 21,
+      //   address: {
+      //     pincode1: 302012,
+      //     city: "Jaipur",
+      //     state: "Rajasthan",
+      //     customerDetailsOffice: {
+      //       customerName: "Abhinav",
+      //       mobileNo: 934545345,
+      //     },
+      //   },
+      // };
+      // let {
+      //   address: {
+      //     pincode1,
+      //     customerDetailsOffice: { mobileNo },
+      //   },
+      // } = obj4;
+      // console.log(pincode, mobileNo);
+
+      // //  In Function
+      // let obj1 = {
+      //   Myname: "Wecode",
+      //   age: 21,
+      //   pincode: 302012,
+      //   city: "Jaipur",
+      //   state: "Rajasthan",
+      // };
+      // function test1({ Myname, age }) {
+      //   console.log(Myname, age);
+      // }
+      // test1(obj1);
+
+      // // Normal Copy : Khi b change kroge to dono me change hoge
+      // let arr6 = [1, 2, 3, 4, 5];
+      // let arr7 = arr6;
+      // console.log(arr6, arr7);
+      // arr7.push(100);
+      // console.log(arr6, arr7);
+      // arr6.push(1000);
+      // console.log(arr6, arr7);
+
+      // let obj0 = {
+      //   name: "Wecode",
+      //   age: 100,
+      // };
+      // let obj01 = obj0;
+      // obj01.age = 1000;
+      // obj0.addres = "jaipur";
+      // console.log(obj0, obj01);
+
+      // // Shallow Copy : Top level object ki properties me change kroge to change ni hoga lekin object ke ander object hai aur usme change krenge to dono me change hoga
+      // let arr8 = [1, 2, [100, 200], 3, 4, 5];
+      // let arr9 = [...arr8];
+      // arr8[2][2] = 1000;
+      // console.log(arr8, arr9);
+
+      // let arr10 = [1, 2, 3, 4, 5];
+      // let arr11 = [...arr10]; //Shallow Copy
+      // arr11.push(100);
+      // arr10.push(999);
+      // console.log(arr10, arr11);
+
+      // // Deep Copy : Isme dono objects me se kisi me b chagne kro to dono me change ni hoga
+
+      // // 3.  The Spread Operator
+      // // Assigning values
+
+      // // Copy Array
+      // let arr12 = [1, 2, 3, 4, 5];
+      // let arr13 = [5, 6, 7, 8, 9];
+      // let arr14 = [...arr12, ...arr13];
+      // console.log(arr14);
+
+      // //  Join 2 Arrays
+      // let arr16 = [1, 2, 3, 4, 5];
+      // let arr17 = [5, 6, 7, 8, 9];
+      // let arr19 = [1, 2, 3, 4, 5];
+      // let arr20 = [5, 6, 7, 8, 9];
+      // let arr18 = [...arr16, ...arr17, ...arr19, ...arr20];
+      // console.log(arr18);
+
+      // // String to array using spread
+      // let str = "Wecode Academy";
+      // let arr15 = [...str];
+      // console.log(arr15);
+
+      // // Passing arguments in function
+      // let arr21 = [1, 2, 3, 4, 5];
+      // function test([a, b, , , c]) {
+      //   console.log(a, b, c); // witout spread operator
+      // }
+      // test(arr21);
+
+      // let arr22 = [1, 2, 3, 4, 5];
+      // function test(a, b, c, d) {
+      //   console.log(a, b, c, d);
+      // }
+      // test(...arr22); //using spread operator
+
+      // // 4.  The Rest Parameter
+      // // Assign values
+      // let arr23 = [1, 2, 3, 4, 5];
+      // let [p, q, ...r] = arr23;
+      // console.log(p, q, r);
+
+      // //  Rest element last element
+      // let [s, t, ...u] = arr23;
+
+      // //  Assign values in object
+      // let obj5 = {
+      //   nameN: "Wecode",
+      //   age: 21,
+      //   address: "Jaipur",
+      //   mobile: 93454534543,
+      // };
+      // let { nameN, address, ...other } = obj5;
+      // console.log(nameN, address, other);
+
+      // //  Variable arguments in function
+      // function test3(...val) {
+      //   console.log(val);
+      // }
+      // test3(1, 2, 3, 4, 5);
+
+      // // 5.  Short Circuiting  or  Logical Assignment Operator
+      // //  Use of ||
+      // let or = 0 || false || 0;
+      // console.log(or);
+
+      // let or1 = false || true || -1;
+      // console.log(or1);
+
+      // //  Use of &&
+      // let and = 10 && 20 && 0 && -2;
+      // console.log(and);
+
+      // //  Replace with ternary operator
+      // let x = 10;
+      // if (x) {
+      //   x = 10;
+      // } else {
+      //   x = 5;
+      // }
+      // let y = 10 || 5;
+      // x = x ? 10 : 5;
+      // y = y ? 10 : 5;
+
+      // //  The Nullish Coalescing Operator ??
+      // let nullish = undefined ?? 10; //null/undefined
+      // console.log(nullish);
+
+      // //  With non nullish values
+      // let nullishvalues = undefined ?? undefined;
+      // console.log(nullishvalues);
+
+      // //  Calling function using &&
+      // function test4() {
+      //   console.log("Hello");
+      // }
+
+      // 0 && test4();
+      // 10 && test4();
+
+      // // ||=
+      // a = 200;
+      // a ||= 100; // a = a || 100
+      // console.log(a);
+
+      // //  &&=
+      // a = 1000;
+      // a &&= 90; //a = a && 90;
+      // console.log(a);
+
+      // // ??=
+      // a = 0;
+      // a ??= 20; //a = a ?? 20;
+      // console.log(a);
+
+      // // ||= to &&= dono ka use
+      // a = (10 && 2) || (10 && 0);
+      // // 10 && 2 = 2
+      // // 10 && 0 = 0
+      // // 2 || 0 = 2
+      // console.log(a);
+
+      // // 6.  Enhanced Object literals
+      // //  Exactly same name
+
+      // let age1 = 20;
+      // let address1 = "Jaipur";
+      // let obj6 = {
+      //   name: "wecode",
+      //   age1,
+      //   address1,
+      // };
+      // console.log(obj6);
+
+      // //  Function in object
+      // let obj7 = {
+      //   age: 21,
+      //   address: "Jaipur",
+      //   sum(a, b) {
+      //     console.log(a + b);
+      //   },
+      // };
+      // obj7.sum(10, 20);
+
+      // //  Computer property name
+      // let num = 100;
+      // let obj8 = {
+      //   ["age" + 4]: 21,
+      //   ["address" + num]: "Jaipur",
+      //   [10 + 20]: 100,
+      // };
+      // console.log(obj8);
+
+      // // 7. Optional Chaining
+      // // Multiple condition in if condition
+      function printAge(age) {
+        age && console.log("My age is " + age);
+      }
+
+      printAge(10);
+
+      //Optional Chaining
+      let obj12 = {
+        name: "wecode",
+        address: {},
+      };
+      console.log(obj12.address.pincode); //undefined
+
+      //Optional Chaining
+      let obj13 = {
+        name: "wecode",
+      };
+      console.log(obj13.address.pincode); //error
+
+      //Optional Chaining
+      let obj14 = {
+        name: "wecode",
+        address: {
+          pincode: 302012,
+          myAddress: {
+            colony: "Narayanpuri",
+          },
+        },
+      };
+      console.log(obj14?.address?.otherAddress?.colony);
+
+      //Optional Chaining
+      let obj15 = {
+        name: "wecode",
+        address: {
+          pincode: 302012,
+          myAddress: {
+            colony: "Narayanpuri",
+          },
+        },
+      };
+      if (
+        obj15 &&
+        obj15.address &&
+        obj15.address.otherAddress &&
+        obj15.address.otherAddress.colony
+      ) {
+        console.log("Yes");
+      } else {
+        console.log("No");
+      }
+
+      if (obj15?.address?.myAddress?.colony) {
+        console.log("Yes");
+      } else {
+        console.log("No");
+      }
+
+      // //  Work for nullish
+      function fn1(a, b) {
+        let ans = a && b && fn2();
+        if (!ans) {
+          console.log("No");
+        }
+      }
+      function fn2() {
+        console.log("Function two....");
+        return 1;
+      }
+      fn1(10, null);
+
+      function fn1(a, b) {
+        if (a && b) {
+          fn2();
+        } else {
+          console.log("No");
+        }
+      }
+      function fn2() {
+        console.log("Function two....");
+      }
+      fn1(10, null);
+
+      // // Checking if method exist
+
+      // // Checking array is empty
+    </script>
+  </body>
+</html>

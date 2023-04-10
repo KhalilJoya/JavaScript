@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Date Formate</title>
+  </head>
+  <body>
+    <script>
+      //   //1st Way
+      //   console.log(new Date());
+
+      //   //2nd Way
+      //   console.log(new Date("10/10/2023 10:18:20"));
+      //   console.log(new Date("10-10-2023"));
+      //   console.log(new Date("2023/10/10"));
+
+      //   //Month 0-11
+
+      //   //3rd Way
+      //   console.log(new Date(2023, 2));
+      //   console.log(new Date(2023, 2, 10));
+      //   console.log(new Date(2023, 2, 10, 20));
+      //   console.log(new Date(2023, 2, 10, 20, 15));
+      //   console.log(new Date(2023, 2, 10, 20, 15, 20));
+      //   console.log(new Date(2023, 2, 10, 20, 15, 20, 10));
+
+      //   //1sec = 1000ms
+      //   //60sec = 1minute
+
+      //   //4th Way
+      //   //1 Jan 1970
+      //   console.log(new Date(365 * 24 * 60 * 60 * 1000));
+      //   console.log(new Date(1002652200000));
+
+      //   let date = new Date();
+      //   console.log(date.getFullYear());
+      //   console.log(date.getMonth());
+      //   console.log(date.getDay());
+      //   console.log(date.getDate());
+      //   console.log(date.getTime());
+      //   console.log(date.getHours());
+      //   console.log(date.getMinutes());
+      //   console.log(date.getSeconds());
+      //   console.log(date.getMilliseconds());
+
+      //   date.setFullYear(2050);
+      //   console.log(date.setDate(15));
+      //   console.log(date);
+
+      //   setInterval(function () {
+      //     let d = new Date();
+      //     console.log(`${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`);
+      //   }, 1000);
+
+      console.log(
+        new Intl.DateTimeFormat("ar_sy", {
+          dateStyle: "full",
+          timeStyle: "short",
+          timeZone: "Australia/Sydney",
+        }).format(new Date())
+      );
+
+      //   console.log(
+      //     new Intl.NumberFormat("zh-cn", {
+      //       style: "unit",
+      //       unit: "liter",
+      //       unitDisplay: "long",
+      //     }).format(100.2)
+      //   );
+
+      //   console.log(
+      //     new Intl.DateTimeFormat("hi", { timeZone: "EST" }).format(new Date())
+      //   );
+    </script>
+  </body>
+</html>
